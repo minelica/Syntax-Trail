@@ -7,7 +7,7 @@ import Home from '@/components/Home.vue';
 import JavaScript from '@/components/languages/JavaScript.vue';
 import Python from '@/components/languages/Python.vue';
 import Java from '@/components/languages/Java.vue';
-import CPlusPlus from '@/components/languages/Cplusplus.vue';
+import CPlusPlus from '@/components/languages/CPlusPlus.vue';
 import CSharp from '@/components/languages/CSharp.vue';
 import Ruby from '@/components/languages/Ruby.vue';
 import PHP from '@/components/languages/PHP.vue';
@@ -33,7 +33,7 @@ const routes = [
     component: MainLayout,
     children: [
       {
-        path: 'home',
+        path: '',
         component: Home
       },
       {

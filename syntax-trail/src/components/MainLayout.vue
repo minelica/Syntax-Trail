@@ -1,20 +1,34 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Menu from "./Menu.vue";
+</script>
 
 <template>
-  <div>
-    <h1 class="inProgressH1">In progress...</h1>
+  <div id="layout">
+    <header>
+      <Menu />
+    </header>
+    <main>
+      <router-view />
+    </main>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.inProgressH1 {
-  text-align: center;
-  margin-top: 50px;
+<style scoped>
+#layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-.inProgressImg {
-  display: block;
-  margin: 0 auto;
-  margin-top: 50px;
+header {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
 }
 </style>

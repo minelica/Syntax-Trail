@@ -10,18 +10,15 @@ import { RouterView } from 'vue-router'
 
 <style>
 body {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #e0e0e0;
-  /* Textfarbe */
+  color: #333;
   margin: 0;
   padding: 0;
-  /* background-color: #0d0d0d; */
-  /* Hintergrundfarbe */
+  background-color: #f8f9fa;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +28,31 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  background-color: #007bff !important;
+  color: #ffffff;
+  padding: 1rem !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 8px;
+}
+
+.el-menu {
+  border-radius: 6px;
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+footer {
+  background-color: #0056b3;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
 }
 </style>
