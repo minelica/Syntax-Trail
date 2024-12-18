@@ -17,7 +17,8 @@ import Menu from "./Menu.vue";
 #layout {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100% !important;
+  width: 100% !important;
 }
 
 header {

@@ -17,8 +17,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f8f9fa;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,5 +54,16 @@ footer {
   color: #ffffff;
   padding: 1rem;
   text-align: center;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+nav a.router-link-active {
+  font-weight: bold;
+  background-color: #0056b3;
 }
 </style>
