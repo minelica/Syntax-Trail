@@ -1,9 +1,15 @@
 {
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
   "devDependencies": {
     "eslint": "^9.16.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-vue": "^9.32.0",
-    "prettier": "^3.4.1"
+    "prettier": "^3.4.1",
+    "vite": "^6.0.2"
   },
   "dependencies": {
     "element": "^0.1.4",

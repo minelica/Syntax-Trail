@@ -1,69 +1,64 @@
 <script setup lang="ts">
+import '@/assets/main.css'
 const title = 'JavaScript'
 const description =
-  'Eine vielseitige Programmiersprache, die vor allem für Webentwicklung verwendet wird.'
+  'A versatile programming language primarily used for web development.'
 
 const toc = [
-  { id: 1, title: 'Überblick', link: '#overview' },
-  { id: 2, title: 'Verwendung', link: '#usage' },
-  { id: 3, title: 'Entwicklungsgeschichte', link: '#history' },
-  { id: 4, title: 'Syntax', link: '#syntax' },
-  { id: 5, title: 'Sprachelemente', link: '#language-elements' },
-  { id: 6, title: 'Code-Beispiele', link: '#code-examples' },
-  { id: 7, title: 'FAQ', link: '#faq' },
+  //  { id: 1, title: 'Overview', link: '#overview' },
+  { id: 1, title: 'Usage', link: '#usage' },
+  { id: 2, title: 'History', link: '#history' },
+  { id: 3, title: 'Syntax', link: '#syntax' },
+  { id: 4, title: 'Language Elements', link: '#language-elements' },
+  { id: 5, title: 'Code Examples', link: '#code-examples' },
+  { id: 6, title: 'FAQ', link: '#faq' },
 ]
 
 const sections = [
   {
-    id: 'overview',
-    title: 'Überblick',
-    content:
-      'JavaScript ist eine der meistgenutzten Programmiersprachen für Webanwendungen. Sie wird sowohl client- als auch serverseitig eingesetzt.',
-  },
-  {
     id: 'usage',
-    title: 'Verwendung',
+    title: 'Usage',
     content:
-      'JavaScript wird für dynamische Webinhalte, interaktive Benutzeroberflächen und serverseitige Logik verwendet. Es ist eine zentrale Technologie des Webs.',
+      'JavaScript is the dominant client-side scripting language of the Web, with 99% of all websites using it for this purpose. Scripts are embedded in or included from HTML documents and interact with the DOM.',
   },
   {
     id: 'history',
-    title: 'Entwicklungsgeschichte',
+    title: 'History',
     content:
-      'JavaScript wurde 1995 von Brendan Eich entwickelt. Es hat sich von einer einfachen Scriptsprache zu einer leistungsstarken Plattform entwickelt.',
+      'JavaScript was developed by Brendan Eich in 1995. It has evolved from a simple scripting language to a powerful platform.',
   },
   {
     id: 'syntax',
     title: 'Syntax',
     content: `
-     - Variablen: let, const, var
-     - Funktionen: function() {}
-     - Klassen: class MyClass {}
-     - Module: export/import`,
+     - Variables: let, const, var
+     - Functions: function() {}
+     - Classes: class MyClass {}
+     - Modules: export/import`,
   },
   {
     id: 'language-elements',
-    title: 'Sprachelemente',
-    content: 'Schleifen, Bedingungen, Events, DOM-Manipulation.',
+    title: 'Language Elements',
+    content: 'Loops, conditions, events, DOM manipulation.',
   },
 ]
 
 const codeExamples = [
   { tab: 'Hello World', code: "console.log('Hello, World!');" },
-  { tab: 'Variablen', code: 'let x = 5; const y = 10;' },
-  { tab: 'Funktionen', code: "function greet() { return 'Hello'; }" },
+  { tab: 'Variables', code: 'let x = 5; const y = 10;' },
+  { tab: 'Functions', code: "function greet() { return 'Hello'; }" },
 ]
 
 const faqs = [
   {
     id: 1,
-    question: 'Was ist JavaScript?',
-    answer: 'JavaScript ist eine Programmiersprache für das Web.',
+    question: 'What is JavaScript?',
+    answer: 'JavaScript is a programming language for the Web.',
   },
   {
     id: 2,
-    question: 'Ist JavaScript schwer zu lernen?',
-    answer: 'Für Anfänger ist es gut geeignet, da es einfach und flexibel ist.',
+    question: 'Is JavaScript hard to learn?',
+    answer: 'It is well-suited for beginners as it is simple and flexible.',
   },
 ]
 </script>
@@ -76,7 +71,7 @@ const faqs = [
       <p>{{ description }}</p>
     </header>
 
-    <!-- Inhaltsverzeichnis -->
+    <!-- Table of Contents -->
     <nav class="table-of-contents">
       <ul>
         <li v-for="item in toc" :key="item.id">
@@ -85,18 +80,18 @@ const faqs = [
       </ul>
     </nav>
 
-    <!-- Hauptinhalt -->
+    <!-- Main Content -->
     <main>
-      <!-- Dynamische Sektionen -->
+      <!-- Dynamic Sections -->
       <section v-for="section in sections" :key="section.id" :id="section.id">
         <h2>{{ section.title }}</h2>
         <p v-if="section.id !== 'syntax'">{{ section.content }}</p>
         <pre v-else><code>{{ section.content }}</code></pre>
       </section>
 
-      <!-- Code-Beispiele -->
+      <!-- Code Examples -->
       <section id="code-examples">
-        <h2>Code-Beispiele</h2>
+        <h2>Code Examples</h2>
         <el-tabs>
           <el-tab-pane v-for="example in codeExamples" :key="example.tab" :label="example.tab">
             <pre><code>{{ example.code }}</code></pre>
@@ -117,35 +112,4 @@ const faqs = [
   </div>
 </template>
 
-<style scoped>
-.language-page {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.hero {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.table-of-contents ul {
-  list-style: none;
-  padding: 0;
-}
-
-.table-of-contents li {
-  margin: 5px 0;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-pre {
-  background-color: #f4f4f4;
-  padding: 10px;
-  border-radius: 5px;
-  overflow-x: auto;
-}
-</style>
+<style scoped></style>

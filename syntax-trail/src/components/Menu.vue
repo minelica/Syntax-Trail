@@ -81,4 +81,12 @@ const handleSelect = (key: string, keyPath: string[]) => {
 .el-menu--horizontal>.el-menu-item:nth-child(1) {
   margin-right: auto;
 }
+
+.el-menu {
+  background-color: #cbd5e0 !important;
+}
+
+.el-menu--horizontal.el-menu {
+    border-bottom: none !important;
+}
 </style>
