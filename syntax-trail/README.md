@@ -6,9 +6,9 @@ Welcome to Syntax Trail, a modern and interactive website designed to explore an
 
 - **Homepage:** Introduces the website and its purpose, with a clear call-to-action for users to dive into the content.
 - **Language Overview:** A curated collection of programming languages displayed in responsive, interactive cards. Each card highlights:
-    - Name
-    - Logo
-    - Description of the language and its applications
+  - Name
+  - Logo
+  - Description of the language and its applications
 - **Search and Filter:** Search bar and filtering options to find languages by category or use case.
 - **Interactive Tutorials (planned):** Hands-on coding exercises directly in the browser.
 - **Responsive Design:** Fully responsive layout for seamless viewing on desktops, tablets, and mobile devices.
@@ -32,27 +32,28 @@ Welcome to Syntax Trail, a modern and interactive website designed to explore an
 ### Prerequisites
 
 Make sure you have the following installed:
+
 - Node.js (v16+ recommended)
 - npm or Yarn package manager
 
 ### Installation
 
 1. Clone the repository:
-     ```sh
-     git clone https://github.com/your-repo/syntax-trail.git
-     ```
+   ```sh
+   git clone https://github.com/your-repo/syntax-trail.git
+   ```
 2. Navigate to the project directory:
-     ```sh
-     cd syntax-trail
-     ```
+   ```sh
+   cd syntax-trail
+   ```
 3. Install dependencies:
-     ```sh
-     npm install
-     ```
+   ```sh
+   npm install
+   ```
 4. Start the development server:
-     ```sh
-     npm run dev
-     ```
+   ```sh
+   npm run dev
+   ```
 5. Open the app in your browser at `http://localhost:5173`.
 
 ## Folder Structure
@@ -87,19 +88,20 @@ syntax-trail/
 ## Contributing
 
 Contributions are welcome! Follow these steps:
+
 1. Fork the repository.
 2. Create a feature branch:
-     ```sh
-     git checkout -b feature/new-feature
-     ```
+   ```sh
+   git checkout -b feature/new-feature
+   ```
 3. Commit your changes:
-     ```sh
-     git commit -m "Add new feature"
-     ```
+   ```sh
+   git commit -m "Add new feature"
+   ```
 4. Push the branch:
-     ```sh
-     git push origin feature/new-feature
-     ```
+   ```sh
+   git push origin feature/new-feature
+   ```
 5. Create a Pull Request.
 
 ## License
@@ -109,6 +111,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ## Contact
 
 For questions or feedback, feel free to reach out:
+
 - **Email:** contact@syntaxtrail.dev
 - **GitHub Issues:** Submit an issue
 
