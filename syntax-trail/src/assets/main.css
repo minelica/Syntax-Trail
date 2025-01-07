@@ -81,12 +81,17 @@ pre {
   color: #cbd5e0;
 }
 
+h1 {
+  font-weight: bold;
+}
+
 h2 {
   font-weight: bold;
   color: #cbd5e0;
   background-color: #198d36;
-  padding-left: 10px;
+  padding-left: 15px;
   border-radius: 20px;
+  margin-top: 50px;
   margin-bottom: 20px;
 }
 
