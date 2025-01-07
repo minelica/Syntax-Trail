@@ -134,7 +134,7 @@ const sections = [
       'Python is a versatile programming language used in various domains. Here are some common use cases:',
     bulletPoints: [
       'Web Development: Python is used to build server-side web applications. Popular frameworks include Django and Flask.',
-      'Data Science and Machine Learning**: Python is widely used for data analysis, visualization, and machine learning. Libraries like NumPy, pandas, Matplotlib, and scikit-learn are commonly used.',
+      'Data Science and Machine Learning: Python is widely used for data analysis, visualization, and machine learning. Libraries like NumPy, pandas, Matplotlib, and scikit-learn are commonly used.',
       'Automation and Scripting: Python is often used for writing scripts to automate repetitive tasks, such as file manipulation, web scraping, and system administration.',
       'Scientific Computing: Python is used in scientific research for simulations, data analysis, and visualization. Libraries like SciPy and SymPy are commonly used.',
       'Artificial Intelligence: Python is a popular choice for developing AI applications, including natural language processing, computer vision, and robotics. Libraries like TensorFlow and PyTorch are widely used.',

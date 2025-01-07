@@ -127,19 +127,13 @@ const sections = [
     title: 'Usage',
     content: `
       C++ is a versatile programming language used in various domains. Here are some common use cases:
-
-      - **System Programming**: C++ is used to develop operating systems, device drivers, and other system-level software.
-      - **Game Development**: C++ is widely used in game development due to its performance and control over hardware resources.
-      - **Real-time Simulations**: C++ is used in real-time simulations for its efficiency and low-level memory manipulation capabilities.
-      - **High-performance Computing**: C++ is used in applications that require high performance, such as scientific computing and financial modeling.
-      - **Embedded Systems**: C++ is used in embedded systems and IoT devices due to its portability and performance.
     `,
     bulletPoints: [
-      'Developing operating systems and device drivers.',
-      'Creating high-performance games.',
-      'Performing real-time simulations.',
-      'Conducting scientific computing and financial modeling.',
-      'Programming embedded systems and IoT devices.'
+      'Developing operating systems and device drivers (System Programming).',
+      'Creating high-performance games (Game Development).',
+      'Performing real-time simulations (Real-time Simulations).',
+      'Conducting scientific computing and financial modeling (High-performance Computing).',
+      'Programming embedded systems and IoT devices (Embedded Systems).'
     ]
   },
   {

@@ -41,6 +41,10 @@
   margin-bottom: 20px;
 }
 
+.table-of-contents {
+  margin-top: 60px;
+}
+
 .table-of-contents ul {
   list-style: none;
   padding: 0;

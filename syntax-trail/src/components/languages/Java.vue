@@ -81,21 +81,14 @@ const sections = [
     title: 'Usage',
     content: `
       Java is a versatile programming language used in various domains. Here are some common use cases:
-
-      - Web Development: Java is used to build server-side web applications. Popular frameworks include Spring and JavaServer Faces (JSF).
-      - Enterprise Applications: Java is widely used for building large-scale enterprise applications due to its robustness and scalability.
-      - Mobile Applications: Java is the primary language for developing Android applications.
-      - Scientific Computing: Java is used in scientific research for simulations, data analysis, and visualization.
-      - Game Development: Java is used to develop games and multimedia applications. Libraries like LWJGL provide tools for game development.
-      - Embedded Systems: Java is used in embedded systems and IoT devices due to its portability and performance.
     `,
     bulletPoints: [
-      'Building server-side web applications.',
-      'Developing large-scale enterprise applications.',
-      'Creating Android mobile applications.',
-      'Performing scientific research and simulations.',
-      'Developing games and multimedia applications.',
-      'Programming embedded systems and IoT devices.'
+      'Building server-side web applications (Web Development).',
+      'Developing large-scale enterprise applications (Enterprise Applications).',
+      'Creating Android mobile applications (Mobile Applications).',
+      'Performing scientific research and simulations (Scientific Computing).',
+      'Developing games and multimedia applications (Game Development).',
+      'Programming embedded systems and IoT devices (Embedded Systems).'
     ]
   },
   {

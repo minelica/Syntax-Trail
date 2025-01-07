@@ -127,19 +127,13 @@ const sections = [
     title: 'Usage',
     content: `
       C# is a versatile programming language used in various domains. Here are some common use cases:
-
-      Web Development (C# is used to build server-side web applications with ASP.NET),
-      Desktop Applications (C# is used to develop Windows desktop applications with Windows Forms and WPF),
-      Game Development (C# is the primary language for developing games with the Unity game engine),
-      Mobile Applications (C# is used to develop cross-platform mobile applications with Xamarin),
-      Cloud Services (C# is used to build cloud-based applications and services with Azure).
     `,
     bulletPoints: [
-      'Building server-side web applications with ASP.NET.',
-      'Developing Windows desktop applications with Windows Forms and WPF.',
-      'Creating games with the Unity game engine.',
-      'Developing cross-platform mobile applications with Xamarin.',
-      'Building cloud-based applications and services with Azure.'
+      'Building server-side web applications with ASP.NET (Web Development).',
+      'Developing Windows desktop applications with Windows Forms and WPF (Desktop Applications).',
+      'Creating games with the Unity game engine (Game Development).',
+      'Developing cross-platform mobile applications with Xamarin (Mobile Applications).',
+      'Building cloud-based applications and services with Azure (Cloud Services).'
     ]
   },
   {
