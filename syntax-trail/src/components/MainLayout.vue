@@ -11,6 +11,7 @@ import '@/assets/main.css'
     <main>
       <router-view />
     </main>
+    <el-backtop :right="50" :bottom="50" />
   </div>
 </template>
 

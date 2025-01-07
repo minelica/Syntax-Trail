@@ -11,7 +11,7 @@
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    background-color: #1a202c /* hsla(160, 100%, 37%, 0.2); */
   }
 }
 
@@ -70,6 +70,7 @@ pre {
   padding: 10px;
   border-radius: 5px;
   overflow-x: auto;
+  color: #cbd5e0;
 }
 
 .toc-title {
@@ -81,6 +82,15 @@ pre {
 }
 
 h2 {
+  font-weight: bold;
+  color: #cbd5e0;
+  background-color: #198d36;
+  padding-left: 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+h3 {
   font-weight: bold;
   color: #cbd5e0;
 }
@@ -118,6 +128,17 @@ h2 {
 
 .el-tabs__item {
   color: #cbd5e0 !important;
+}
+
+.cardTitle {
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+
+.el-card {
+  margin-bottom: 20px;
+  background-color: #cbd5e0 !important;
 }
 
 /* --- MainLayout.vue --- */
@@ -200,4 +221,9 @@ nav a {
 nav a.router-link-active {
   font-weight: bold;
   background-color: #0056b3;
+}
+
+/* --- el-backtop --- */
+.el-backtop {
+  --el-backtop-text-color: #1a202c !important;
 }

@@ -89,4 +89,33 @@ const handleSelect = (key: string, keyPath: string[]) => {
 .el-menu--horizontal.el-menu {
     border-bottom: none !important;
 }
+
+.el-menu--horizontal>.el-menu-item.is-active {
+    border-bottom: 2px solid #2d3748 !important;
+    color: var(--el-menu-active-color) !important; /* edit */
+}
+
+.el-menu--horizontal>.el-menu-item a, .el-menu--horizontal>.el-menu-item a:hover {
+  font-weight: bold;
+}
+
+a:-webkit-any-link {
+    text-decoration: none !important;
+}
+
+.el-sub-menu__title {
+  font-weight: bold;
+}
+
+.el-menu--horizontal>.el-sub-menu.is-active .el-sub-menu__title {
+    border-bottom: 2px solid #2d3748 !important;
+}
+
+.el-sub-menu:hover {
+  background-color: #cbd5e0 !important;
+}
+
+.el-sub-menu.is-opened {
+  background-color: #cbd5e0 !important;
+}
 </style>
