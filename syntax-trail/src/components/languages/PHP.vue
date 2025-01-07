@@ -1,4 +1,3 @@
-<!-- filepath: /c:/Users/masinovic/syntax-trail/syntax-trail/src/components/languages/Php.vue -->
 <script setup lang="ts">
 import '@/assets/main.css'
 
