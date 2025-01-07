@@ -82,12 +82,12 @@ const sections = [
     content: `
       Java is a versatile programming language used in various domains. Here are some common use cases:
 
-      - **Web Development**: Java is used to build server-side web applications. Popular frameworks include Spring and JavaServer Faces (JSF).
-      - **Enterprise Applications**: Java is widely used for building large-scale enterprise applications due to its robustness and scalability.
-      - **Mobile Applications**: Java is the primary language for developing Android applications.
-      - **Scientific Computing**: Java is used in scientific research for simulations, data analysis, and visualization.
-      - **Game Development**: Java is used to develop games and multimedia applications. Libraries like LWJGL provide tools for game development.
-      - **Embedded Systems**: Java is used in embedded systems and IoT devices due to its portability and performance.
+      - Web Development: Java is used to build server-side web applications. Popular frameworks include Spring and JavaServer Faces (JSF).
+      - Enterprise Applications: Java is widely used for building large-scale enterprise applications due to its robustness and scalability.
+      - Mobile Applications: Java is the primary language for developing Android applications.
+      - Scientific Computing: Java is used in scientific research for simulations, data analysis, and visualization.
+      - Game Development: Java is used to develop games and multimedia applications. Libraries like LWJGL provide tools for game development.
+      - Embedded Systems: Java is used in embedded systems and IoT devices due to its portability and performance.
     `,
     bulletPoints: [
       'Building server-side web applications.',
@@ -162,7 +162,6 @@ const languageElementsContent = [
 const codeExamples = [
   {
     tab: 'Simple',
-    description: 'A simple example demonstrating variable declaration and a loop.',
     code: `
       public class Main {
         public static void main(String[] args) {
@@ -178,7 +177,6 @@ const codeExamples = [
   },
   {
     tab: 'Asynchronous',
-    description: 'An example demonstrating asynchronous programming using CompletableFuture.',
     code: `
       import java.util.concurrent.CompletableFuture;
       import java.util.concurrent.ExecutionException;
@@ -212,7 +210,6 @@ const codeExamples = [
   },
   {
     tab: 'Object-oriented',
-    description: 'An example demonstrating object-oriented programming with classes and inheritance.',
     code: `
       public abstract class Person {
         protected String name;
@@ -267,7 +264,6 @@ const codeExamples = [
   },
   {
     tab: 'Functional',
-    description: 'An example demonstrating functional programming with streams and lambda expressions.',
     code: `
       import java.util.Arrays;
       import java.util.List;
@@ -329,7 +325,6 @@ const codeExamples = [
   },
   {
     tab: 'Ideal for tests',
-    description: 'An example demonstrating unit testing with JUnit.',
     code: `
       import org.junit.jupiter.api.Test;
       import static org.junit.jupiter.api.Assertions.*;
@@ -453,7 +448,6 @@ const faqs = [
         <h3>Why Java?</h3>
         <el-tabs>
           <el-tab-pane v-for="example in codeExamples" :key="example.tab" :label="example.tab">
-            <p>{{ example.description }}</p>
             <pre><code>{{ example.code }}</code></pre>
           </el-tab-pane>
         </el-tabs>
