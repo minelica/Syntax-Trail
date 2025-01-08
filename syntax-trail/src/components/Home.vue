@@ -1,20 +1,115 @@
-<script setup lang="ts"></script>
-
 <template>
-  <div>
-    <h1 class="inProgressH1">In progress...</h1>
+  <div class="home">
+    <!-- Hero Section -->
+    <header class="hero">
+      <h1>Syntax Trail</h1>
+      <p>Your Guide to Programming Languages</p>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="introduction">
+      <!-- <h2>Welcome to Syntax Trail</h2> -->
+      <p>
+        Syntax Trail is your ultimate guide to learning and mastering various programming languages. Whether you are a
+        beginner looking to start your coding journey or an experienced developer aiming to expand your skill set, we
+        have got you covered. Explore our comprehensive tutorials, examples, and resources to enhance your programming
+        knowledge and stay ahead in the tech world.
+      </p>
+    </section>
+
+    <!-- Grid Section -->
+    <section class="languages-grid">
+      <h2>Explore Programming Languages</h2>
+      <div class="grid">
+        <el-card v-for="language in languages" :key="language.name" class="language-card">
+          <img :src="language.logo" :alt="language.name" class="logo" />
+          <h3>{{ language.name }}</h3>
+        </el-card>
+      </div>
+    </section>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.inProgressH1 {
-  text-align: center;
-  margin-top: 50px;
+<script lang="ts" setup>
+import { ref } from 'vue';
+
+// Define the list of programming languages
+const languages = ref([
+  { name: 'JavaScript', logo: '/src/assets/logos/javascript.png' },
+  { name: 'Python', logo: '/src/assets/logos/python.png' },
+  { name: 'Java', logo: '/src/assets/logos/java.png' },
+  { name: 'C++', logo: '/src/assets/logos/cplusplus.png' },
+  { name: 'C#', logo: '/src/assets/logos/csharp.png' },
+  { name: 'Ruby', logo: '/src/assets/logos/ruby.png' },
+  { name: 'PHP', logo: '/src/assets/logos/php.png' },
+  { name: 'Swift', logo: '/src/assets/logos/swift.png' },
+  { name: 'Go', logo: '/src/assets/logos/go.png' },
+  { name: 'Rust', logo: '/src/assets/logos/rust.png' },
+  { name: 'SQL', logo: '/src/assets/logos/sql.png' },
+  { name: 'Kotlin', logo: '/src/assets/logos/kotlin.png' },
+  { name: 'TypeScript', logo: '/src/assets/logos/typescript.png' },
+  { name: 'R', logo: '/src/assets/logos/r.png' },
+  { name: 'ShellScript', logo: '/src/assets/logos/shell.png' },
+  { name: 'MATLAB', logo: '/src/assets/logos/matlab.png' },
+  { name: 'Dart', logo: '/src/assets/logos/dart.png' },
+]);
+</script>
+
+<style scoped>
+.home {
+  color: #ffffff;
+  background-color: #2d3748;
+  padding: 2rem;
+  min-height: 100vh;
 }
 
-.inProgressImg {
-  display: block;
-  margin: 0 auto;
-  margin-top: 50px;
+.hero {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: #a0aec0;
+}
+
+.languages-grid {
+  margin-top: 2rem;
+}
+
+.languages-grid h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.language-card {
+  text-align: center;
+  background-color: #1a202c;
+  color: #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.2s;
+}
+
+.language-card:hover {
+  transform: scale(1.05);
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
 }
 </style>
