@@ -12,7 +12,8 @@ const handleSelect = (key: string, keyPath: string[]) => {
   <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :ellipsis="false"
     @select="handleSelect">
     <el-menu-item index="0">
-      <img style="width: 100px" alt="Logo" />
+      <img src="/src/assets/logo.jpg" style="width: 50px; border-radius: 20px" alt="Logo" />
+      <p class="menu_title_st">Syntax Trail</p>
     </el-menu-item>
     <el-menu-item index="1">
       <router-link to="/">Home</router-link>
@@ -117,5 +118,13 @@ a:-webkit-any-link {
 
 .el-sub-menu.is-opened {
   background-color: #cbd5e0 !important;
+}
+
+.menu_title_st {
+  font-weight: bolder;
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 30px;
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 2px 2px 2px rgba(206,89,55,0);
 }
 </style>
