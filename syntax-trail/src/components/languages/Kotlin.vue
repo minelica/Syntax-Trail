@@ -5,7 +5,7 @@ const title = 'Kotlin'
 const description = [
   'Kotlin is a modern, statically typed programming language that runs on the Java Virtual Machine (JVM) and can also be compiled to JavaScript or native code. It was developed by JetBrains and first released in 2011.',
   'Kotlin is designed to be fully interoperable with Java, making it easy to use alongside existing Java code. It is known for its concise syntax, safety features, and support for both object-oriented and functional programming paradigms.',
-  'Kotlin is widely used for Android app development, server-side development, and more.'
+  'Kotlin is widely used for Android app development, server-side development, and more.',
 ]
 
 const toc = [
@@ -20,12 +20,13 @@ const toc = [
 const syntaxContent = [
   {
     title: 'Variables',
-    description: 'Variables in Kotlin can be defined using `val` for immutable variables and `var` for mutable variables.',
+    description:
+      'Variables in Kotlin can be defined using `val` for immutable variables and `var` for mutable variables.',
     content: `
       val x = 10
       var y = 20
       val z = "Hello, World!"
-    `
+    `,
   },
   {
     title: 'Functions',
@@ -38,11 +39,12 @@ const syntaxContent = [
       fun greet() {
         println("Hello, World!")
       }
-    `
+    `,
   },
   {
     title: 'Classes',
-    description: 'Classes are defined using the `class` keyword. A class can contain methods and properties.',
+    description:
+      'Classes are defined using the `class` keyword. A class can contain methods and properties.',
     content: `
       class Person(val name: String, var age: Int) {
         fun greet(): String {
@@ -51,11 +53,12 @@ const syntaxContent = [
       }
 
       val john = Person("John", 30)
-    `
+    `,
   },
   {
     title: 'Modules',
-    description: 'Kotlin supports modular programming with packages. Use the `package` keyword to define a package.',
+    description:
+      'Kotlin supports modular programming with packages. Use the `package` keyword to define a package.',
     content: `
       package mypackage
 
@@ -66,14 +69,15 @@ const syntaxContent = [
       fun main() {
         myFunction()
       }
-    `
-  }
+    `,
+  },
 ]
 
 const languageElementsContent = [
   {
     title: 'Loops',
-    description: 'Loops are used to repeat a block of code. Kotlin has `for`, `while`, and `do-while` loops.',
+    description:
+      'Loops are used to repeat a block of code. Kotlin has `for`, `while`, and `do-while` loops.',
     content: `
       for (i in 0..4) {
         println(i)
@@ -84,7 +88,7 @@ const languageElementsContent = [
         println(j)
         j++
       }
-    `
+    `,
   },
   {
     title: 'Conditions',
@@ -96,7 +100,7 @@ const languageElementsContent = [
       } else {
         println("x is 10 or less")
       }
-    `
+    `,
   },
   {
     title: 'Exception Handling',
@@ -109,8 +113,8 @@ const languageElementsContent = [
       } finally {
         println("This will always execute")
       }
-    `
-  }
+    `,
+  },
 ]
 
 const sections = [
@@ -125,8 +129,8 @@ const sections = [
       'Building server-side applications with frameworks like Ktor and Spring (Server-side Development).',
       'Compiling to JavaScript for building web applications (Web Development).',
       'Performing data analysis and machine learning (Data Science).',
-      'Developing cross-platform desktop applications with frameworks like TornadoFX (Desktop Applications).'
-    ]
+      'Developing cross-platform desktop applications with frameworks like TornadoFX (Desktop Applications).',
+    ],
   },
   {
     id: 'history',
@@ -143,7 +147,7 @@ const sections = [
     id: 'syntax',
     title: 'Syntax',
     content: syntaxContent,
-  }
+  },
 ]
 
 const codeExamples = [
@@ -158,7 +162,7 @@ const codeExamples = [
           print(" \$i")
         }
       }
-    `
+    `,
   },
   {
     tab: 'Asynchronous',
@@ -180,7 +184,7 @@ const codeExamples = [
       fun log(start: Long, msg: String) {
         println("\$msg after \${System.currentTimeMillis() - start}ms")
       }
-    `
+    `,
   },
   {
     tab: 'Object-oriented',
@@ -219,7 +223,7 @@ const codeExamples = [
         sam.eat()  // An implementation of an interface function
         sam.pay(10)  // A default implementation in an interface
       }
-    `
+    `,
   },
   {
     tab: 'Functional',
@@ -249,7 +253,7 @@ const codeExamples = [
           .sorted()
         println(senders)  // [Adam, Ma]
       }
-    `
+    `,
   },
   {
     tab: 'Ideal for tests',
@@ -284,38 +288,42 @@ const codeExamples = [
           assertTrue(compute(), "Computation failed")
         }
       }
-    `
-  }
+    `,
+  },
 ]
 
 const faqs = [
   {
     id: 1,
     question: 'What is Kotlin?',
-    answer: 'Kotlin is a modern, statically typed programming language that runs on the Java Virtual Machine (JVM) and can also be compiled to JavaScript or native code.',
+    answer:
+      'Kotlin is a modern, statically typed programming language that runs on the Java Virtual Machine (JVM) and can also be compiled to JavaScript or native code.',
   },
   {
     id: 2,
     question: 'Is Kotlin hard to learn?',
-    answer: 'Kotlin is well-suited for beginners as it has a simple syntax and is easy to learn and use.',
+    answer:
+      'Kotlin is well-suited for beginners as it has a simple syntax and is easy to learn and use.',
   },
   {
     id: 3,
     question: 'What are the main uses of Kotlin?',
-    answer: 'Kotlin is used in Android development, server-side development, web development, data science, and desktop applications.',
+    answer:
+      'Kotlin is used in Android development, server-side development, web development, data science, and desktop applications.',
   },
   {
     id: 4,
     question: 'What are some popular Kotlin libraries and frameworks?',
-    answer: 'Popular Kotlin libraries and frameworks include Ktor, Spring, Kotlinx.coroutines, and TornadoFX.',
+    answer:
+      'Popular Kotlin libraries and frameworks include Ktor, Spring, Kotlinx.coroutines, and TornadoFX.',
   },
   {
     id: 5,
     question: 'What is the difference between Kotlin and Java?',
-    answer: 'Kotlin is designed to be more concise and expressive than Java, with features like null safety, extension functions, and coroutines.',
+    answer:
+      'Kotlin is designed to be more concise and expressive than Java, with features like null safety, extension functions, and coroutines.',
   },
 ]
-
 </script>
 
 <template>
@@ -346,9 +354,9 @@ const faqs = [
         <div v-else>
           <el-card v-for="(item, index) in syntaxContent" :key="index">
             <p class="cardTitle">{{ item.title }}</p>
-            <br>
+            <br />
             <p>{{ item.description }}</p>
-            <br>
+            <br />
             <pre><code v-html="item.content"></code></pre>
           </el-card>
         </div>
@@ -365,9 +373,9 @@ const faqs = [
         <h2>Language Elements</h2>
         <el-card v-for="(element, index) in languageElementsContent" :key="index">
           <p class="cardTitle">{{ element.title }}</p>
-          <br>
+          <br />
           <p>{{ element.description }}</p>
-          <br>
+          <br />
           <pre><code v-html="element.content"></code></pre>
         </el-card>
       </section>

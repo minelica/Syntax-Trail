@@ -5,7 +5,7 @@ const title = 'TypeScript'
 const description = [
   'TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale. It was developed and maintained by Microsoft and first released in 2012.',
   'TypeScript adds optional static types to JavaScript, which can help catch errors early in the development process and improve code quality. It also supports modern JavaScript features and transpiles to plain JavaScript, making it compatible with all JavaScript environments.',
-  'TypeScript is widely used for large-scale web applications, server-side development, and more.'
+  'TypeScript is widely used for large-scale web applications, server-side development, and more.',
 ]
 
 const toc = [
@@ -20,27 +20,30 @@ const toc = [
 const syntaxContent = [
   {
     title: 'Variables',
-    description: 'Variables in TypeScript can be defined using `var`, `let`, or `const`, with optional type annotations.',
+    description:
+      'Variables in TypeScript can be defined using `var`, `let`, or `const`, with optional type annotations.',
     content: `
       var x: number = 10;
       let y: number = 20;
       const z: string = "Hello, World!";
-    `
+    `,
   },
   {
     title: 'Functions',
-    description: 'Functions in TypeScript are defined using the `function` keyword or as arrow functions, with optional type annotations.',
+    description:
+      'Functions in TypeScript are defined using the `function` keyword or as arrow functions, with optional type annotations.',
     content: `
       function add(a: number, b: number): number {
         return a + b;
       }
 
       const subtract = (a: number, b: number): number => a - b;
-    `
+    `,
   },
   {
     title: 'Classes',
-    description: 'Classes are defined using the `class` keyword, with optional type annotations for properties and methods.',
+    description:
+      'Classes are defined using the `class` keyword, with optional type annotations for properties and methods.',
     content: `
       class Person {
         name: string;
@@ -57,11 +60,12 @@ const syntaxContent = [
       }
 
       const john = new Person("John", 30);
-    `
+    `,
   },
   {
     title: 'Modules',
-    description: 'TypeScript supports modular programming with ES6 modules. Use the `import` and `export` statements to include and export modules.',
+    description:
+      'TypeScript supports modular programming with ES6 modules. Use the `import` and `export` statements to include and export modules.',
     content: `
       // In myModule.ts
       export const myVariable: number = 42;
@@ -75,14 +79,15 @@ const syntaxContent = [
 
       console.log(myVariable); // 42
       console.log(myFunction()); // Hello, World!
-    `
-  }
+    `,
+  },
 ]
 
 const languageElementsContent = [
   {
     title: 'Loops',
-    description: 'Loops are used to repeat a block of code. TypeScript has `for`, `while`, and `do-while` loops.',
+    description:
+      'Loops are used to repeat a block of code. TypeScript has `for`, `while`, and `do-while` loops.',
     content: `
       for (let i: number = 0; i < 5; i++) {
         console.log(i);
@@ -93,7 +98,7 @@ const languageElementsContent = [
         console.log(j);
         j++;
       }
-    `
+    `,
   },
   {
     title: 'Conditions',
@@ -105,11 +110,12 @@ const languageElementsContent = [
       } else {
         console.log("x is 10 or less");
       }
-    `
+    `,
   },
   {
     title: 'Error Handling',
-    description: 'Error handling in TypeScript is done using the `try`, `catch`, and `finally` statements.',
+    description:
+      'Error handling in TypeScript is done using the `try`, `catch`, and `finally` statements.',
     content: `
       try {
         let result: number = 10 / 0;
@@ -118,8 +124,8 @@ const languageElementsContent = [
       } finally {
         console.log("This will always execute");
       }
-    `
-  }
+    `,
+  },
 ]
 
 const sections = [
@@ -140,8 +146,8 @@ const sections = [
       'Developing server-side applications with Node.js (Server-side Development).',
       'Creating cross-platform mobile applications with frameworks like React Native (Mobile Development).',
       'Building cross-platform desktop applications with frameworks like Electron (Desktop Development).',
-      'Developing libraries and frameworks that provide type safety and better tooling (Library and Framework Development).'
-    ]
+      'Developing libraries and frameworks that provide type safety and better tooling (Library and Framework Development).',
+    ],
   },
   {
     id: 'history',
@@ -158,7 +164,7 @@ const sections = [
     id: 'syntax',
     title: 'Syntax',
     content: syntaxContent,
-  }
+  },
 ]
 
 const codeExamples = [
@@ -171,7 +177,7 @@ const codeExamples = [
       for (let i: number = 0; i <= 10; i++) {  // Loop over a range from 0 to 10
         console.log(\` \${i}\`);
       }
-    `
+    `,
   },
   {
     tab: 'Asynchronous',
@@ -198,7 +204,7 @@ const codeExamples = [
       }
 
       main();
-    `
+    `,
   },
   {
     tab: 'Object-oriented',
@@ -250,7 +256,7 @@ const codeExamples = [
       }
 
       main();
-    `
+    `,
   },
   {
     tab: 'Functional',
@@ -287,7 +293,7 @@ const codeExamples = [
       }
 
       main();
-    `
+    `,
   },
   {
     tab: 'Ideal for tests',
@@ -317,38 +323,42 @@ const codeExamples = [
       export function compute(): boolean {
         return true;
       }
-    `
-  }
+    `,
+  },
 ]
 
 const faqs = [
   {
     id: 1,
     question: 'What is TypeScript?',
-    answer: 'TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.',
+    answer:
+      'TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.',
   },
   {
     id: 2,
     question: 'Is TypeScript hard to learn?',
-    answer: 'TypeScript is well-suited for beginners as it has a simple syntax and is easy to learn and use, especially if you are already familiar with JavaScript.',
+    answer:
+      'TypeScript is well-suited for beginners as it has a simple syntax and is easy to learn and use, especially if you are already familiar with JavaScript.',
   },
   {
     id: 3,
     question: 'What are the main uses of TypeScript?',
-    answer: 'TypeScript is used in web development, server-side development, mobile development, desktop development, and library and framework development.',
+    answer:
+      'TypeScript is used in web development, server-side development, mobile development, desktop development, and library and framework development.',
   },
   {
     id: 4,
     question: 'What are some popular TypeScript libraries and frameworks?',
-    answer: 'Popular TypeScript libraries and frameworks include Angular, React, Vue, NestJS, and Express.',
+    answer:
+      'Popular TypeScript libraries and frameworks include Angular, React, Vue, NestJS, and Express.',
   },
   {
     id: 5,
     question: 'What is the difference between TypeScript and JavaScript?',
-    answer: 'TypeScript adds optional static types to JavaScript, which can help catch errors early in the development process and improve code quality. It also supports modern JavaScript features and transpiles to plain JavaScript.',
+    answer:
+      'TypeScript adds optional static types to JavaScript, which can help catch errors early in the development process and improve code quality. It also supports modern JavaScript features and transpiles to plain JavaScript.',
   },
 ]
-
 </script>
 
 <template>
@@ -379,9 +389,9 @@ const faqs = [
         <div v-else>
           <el-card v-for="(item, index) in syntaxContent" :key="index">
             <p class="cardTitle">{{ item.title }}</p>
-            <br>
+            <br />
             <p>{{ item.description }}</p>
-            <br>
+            <br />
             <pre><code v-html="item.content"></code></pre>
           </el-card>
         </div>
@@ -398,9 +408,9 @@ const faqs = [
         <h2>Language Elements</h2>
         <el-card v-for="(element, index) in languageElementsContent" :key="index">
           <p class="cardTitle">{{ element.title }}</p>
-          <br>
+          <br />
           <p>{{ element.description }}</p>
-          <br>
+          <br />
           <pre><code v-html="element.content"></code></pre>
         </el-card>
       </section>

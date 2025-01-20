@@ -5,7 +5,7 @@ const title = 'MATLAB'
 const description = [
   'MATLAB is a high-level programming language and interactive environment used for numerical computation, visualization, and programming. It was developed by MathWorks and first released in 1984.',
   'MATLAB is widely used in academia and industry for tasks such as data analysis, signal processing, image processing, control systems, and more. It is known for its extensive library of built-in functions and toolboxes.',
-  'MATLAB code can be integrated with other languages, including C, C++, Java, and Python, making it a versatile tool for various applications.'
+  'MATLAB code can be integrated with other languages, including C, C++, Java, and Python, making it a versatile tool for various applications.',
 ]
 
 const toc = [
@@ -25,7 +25,7 @@ const syntaxContent = [
       x = 10;
       y = 20;
       z = 'Hello, World!';
-    `
+    `,
   },
   {
     title: 'Functions',
@@ -38,19 +38,21 @@ const syntaxContent = [
       function greet()
         disp('Hello, World!');
       end
-    `
+    `,
   },
   {
     title: 'Matrices',
-    description: 'Matrices are a fundamental data type in MATLAB and can be defined using square brackets.',
+    description:
+      'Matrices are a fundamental data type in MATLAB and can be defined using square brackets.',
     content: `
       A = [1, 2, 3; 4, 5, 6; 7, 8, 9];
       B = [10; 20; 30];
-    `
+    `,
   },
   {
     title: 'Scripts and Functions',
-    description: 'MATLAB supports both scripts and functions. Scripts are files containing a sequence of MATLAB commands, while functions are defined using the `function` keyword.',
+    description:
+      'MATLAB supports both scripts and functions. Scripts are files containing a sequence of MATLAB commands, while functions are defined using the `function` keyword.',
     content: `
       % Script example
       x = 10;
@@ -62,8 +64,8 @@ const syntaxContent = [
       function result = add(a, b)
         result = a + b;
       end
-    `
-  }
+    `,
+  },
 ]
 
 const languageElementsContent = [
@@ -80,7 +82,7 @@ const languageElementsContent = [
         disp(j);
         j = j + 1;
       end
-    `
+    `,
   },
   {
     title: 'Conditions',
@@ -92,7 +94,7 @@ const languageElementsContent = [
       else
         disp('x is 10 or less');
       end
-    `
+    `,
   },
   {
     title: 'Plotting',
@@ -104,8 +106,8 @@ const languageElementsContent = [
       title('Sine Wave');
       xlabel('x');
       ylabel('sin(x)');
-    `
-  }
+    `,
+  },
 ]
 
 const sections = [
@@ -120,8 +122,8 @@ const sections = [
       'Analyzing and processing signals (Signal Processing).',
       'Image analysis and computer vision (Image Processing).',
       'Designing and simulating control systems (Control Systems).',
-      'Developing machine learning models and algorithms (Machine Learning).'
-    ]
+      'Developing machine learning models and algorithms (Machine Learning).',
+    ],
   },
   {
     id: 'history',
@@ -152,7 +154,7 @@ const codeExamples = [
       for i = 0:10  % Loop over a range from 0 to 10
         disp(i);
       end
-    `
+    `,
   },
   {
     tab: 'Data Analysis',
@@ -163,7 +165,7 @@ const codeExamples = [
       std_data = std(data);  % Calculate standard deviation
       disp(['Mean: ', num2str(mean_data)]);
       disp(['Standard Deviation: ', num2str(std_data)]);
-    `
+    `,
   },
   {
     tab: 'Signal Processing',
@@ -176,7 +178,7 @@ const codeExamples = [
       title('Magnitude of Fourier Transform');
       xlabel('Frequency (Hz)');
       ylabel('Magnitude');
-    `
+    `,
   },
   {
     tab: 'Image Processing',
@@ -187,7 +189,7 @@ const codeExamples = [
       edge_img = edge(gray_img, 'Canny');  % Detect edges
       imshow(edge_img);  % Display the edge-detected image
       title('Edge Detection');
-    `
+    `,
   },
   {
     tab: 'Control Systems',
@@ -199,38 +201,42 @@ const codeExamples = [
       title('Step Response');
       xlabel('Time (seconds)');
       ylabel('Amplitude');
-    `
-  }
+    `,
+  },
 ]
 
 const faqs = [
   {
     id: 1,
     question: 'What is MATLAB?',
-    answer: 'MATLAB is a high-level programming language and interactive environment used for numerical computation, visualization, and programming.',
+    answer:
+      'MATLAB is a high-level programming language and interactive environment used for numerical computation, visualization, and programming.',
   },
   {
     id: 2,
     question: 'Is MATLAB hard to learn?',
-    answer: 'MATLAB is well-suited for beginners as it has a simple syntax and is easy to learn and use, especially if you are already familiar with mathematical concepts.',
+    answer:
+      'MATLAB is well-suited for beginners as it has a simple syntax and is easy to learn and use, especially if you are already familiar with mathematical concepts.',
   },
   {
     id: 3,
     question: 'What are the main uses of MATLAB?',
-    answer: 'MATLAB is used for data analysis, signal processing, image processing, control systems, and machine learning.',
+    answer:
+      'MATLAB is used for data analysis, signal processing, image processing, control systems, and machine learning.',
   },
   {
     id: 4,
     question: 'What are some popular MATLAB toolboxes?',
-    answer: 'Popular MATLAB toolboxes include the Signal Processing Toolbox, Image Processing Toolbox, Control System Toolbox, and Statistics and Machine Learning Toolbox.',
+    answer:
+      'Popular MATLAB toolboxes include the Signal Processing Toolbox, Image Processing Toolbox, Control System Toolbox, and Statistics and Machine Learning Toolbox.',
   },
   {
     id: 5,
     question: 'What is the difference between MATLAB and Python?',
-    answer: 'MATLAB is designed specifically for numerical computation and data analysis, while Python is a general-purpose programming language with a wide range of applications. Both languages are widely used in scientific computing.',
+    answer:
+      'MATLAB is designed specifically for numerical computation and data analysis, while Python is a general-purpose programming language with a wide range of applications. Both languages are widely used in scientific computing.',
   },
 ]
-
 </script>
 
 <template>
@@ -238,7 +244,7 @@ const faqs = [
     <!-- Header -->
     <header class="hero">
       <h1>{{ title }}</h1>
-      <br>
+      <br />
       <div>
         <p v-for="(paragraph, index) in description" :key="index">{{ paragraph }}</p>
       </div>
@@ -262,14 +268,14 @@ const faqs = [
         <div v-else>
           <el-card v-for="(item, index) in syntaxContent" :key="index">
             <p class="cardTitle">{{ item.title }}</p>
-            <br>
+            <br />
             <p>{{ item.description }}</p>
-            <br>
+            <br />
             <pre><code v-html="item.content"></code></pre>
           </el-card>
         </div>
         <div v-if="section.bulletPoints">
-          <br>
+          <br />
           <h3>Examples of scripted behavior:</h3>
           <ul>
             <li v-for="(point, index) in section.bulletPoints" :key="index">{{ point }}</li>
@@ -282,9 +288,9 @@ const faqs = [
         <h2>Language Elements</h2>
         <el-card v-for="(element, index) in languageElementsContent" :key="index">
           <p class="cardTitle">{{ element.title }}</p>
-          <br>
+          <br />
           <p>{{ element.description }}</p>
-          <br>
+          <br />
           <pre><code v-html="element.content"></code></pre>
         </el-card>
       </section>

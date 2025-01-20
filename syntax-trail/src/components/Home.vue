@@ -3,17 +3,18 @@
     <!-- Hero Section -->
     <header class="hero">
       <h1>Syntax Trail</h1>
-      <p>Your Guide to Programming Languages</p>
+      <p>Your Companion for Exploring Programming Languages</p>
     </header>
 
     <!-- Introduction Section -->
     <section class="introduction">
       <!-- <h2>Welcome to Syntax Trail</h2> -->
-      <p>
-        Syntax Trail is your ultimate guide to learning and mastering various programming languages. Whether you are a
-        beginner looking to start your coding journey or an experienced developer aiming to expand your skill set, we
-        have got you covered. Explore our comprehensive tutorials, examples, and resources to enhance your programming
-        knowledge and stay ahead in the tech world.
+      <p class="home-intro">
+        Syntax Trail is your ultimate guide to learning and mastering various programming languages.
+        Whether you are a beginner looking to start your coding journey or an experienced developer
+        aiming to expand your skill set, we have got you covered. Explore our comprehensive
+        tutorials, examples, and resources to enhance your programming knowledge and stay ahead in
+        the tech world.
       </p>
     </section>
 
@@ -31,7 +32,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 
 // Define the list of programming languages
 const languages = ref([
@@ -52,7 +53,7 @@ const languages = ref([
   { name: 'ShellScript', logo: '/src/assets/logos/shell.png' },
   { name: 'MATLAB', logo: '/src/assets/logos/matlab.png' },
   { name: 'Dart', logo: '/src/assets/logos/dart.png' },
-]);
+])
 </script>
 
 <style scoped>
@@ -111,5 +112,23 @@ const languages = ref([
 .logo {
   width: 100px;
   height: 100px;
+}
+
+.home-intro {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #fff,
+    0 0 20px #1a202c,
+    0 0 30px #1a202c,
+    0 0 40px #1a202c,
+    0 0 55px #1a202c,
+    0 0 75px #1a202c,
+    2px 2px 2px rgba(206, 89, 55, 0);
 }
 </style>

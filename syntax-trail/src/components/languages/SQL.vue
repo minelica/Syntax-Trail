@@ -5,7 +5,7 @@ const title = 'SQL'
 const description = [
   'SQL (Structured Query Language) is a standard programming language specifically designed for managing and manipulating relational databases. It was first developed in the 1970s by IBM.',
   'SQL is used to perform various operations on data stored in a relational database, such as querying, updating, inserting, and deleting data. It is also used to create and modify database structures like tables and indexes.',
-  'SQL is widely used in various applications, from small-scale desktop applications to large-scale enterprise systems and web applications.'
+  'SQL is widely used in various applications, from small-scale desktop applications to large-scale enterprise systems and web applications.',
 ]
 
 const toc = [
@@ -23,57 +23,59 @@ const syntaxContent = [
     description: 'SQL queries are used to retrieve data from a database.',
     content: `
       SELECT * FROM users WHERE age > 30;
-    `
+    `,
   },
   {
     title: 'Inserts',
     description: 'SQL inserts are used to add new data to a database.',
     content: `
       INSERT INTO users (name, age) VALUES ('John Doe', 30);
-    `
+    `,
   },
   {
     title: 'Updates',
     description: 'SQL updates are used to modify existing data in a database.',
     content: `
       UPDATE users SET age = 31 WHERE name = 'John Doe';
-    `
+    `,
   },
   {
     title: 'Deletes',
     description: 'SQL deletes are used to remove data from a database.',
     content: `
       DELETE FROM users WHERE name = 'John Doe';
-    `
-  }
+    `,
+  },
 ]
 
 const languageElementsContent = [
   {
     title: 'Joins',
-    description: 'Joins are used to combine rows from two or more tables based on a related column.',
+    description:
+      'Joins are used to combine rows from two or more tables based on a related column.',
     content: `
       SELECT users.name, orders.amount
       FROM users
       JOIN orders ON users.id = orders.user_id;
-    `
+    `,
   },
   {
     title: 'Subqueries',
-    description: 'Subqueries are nested queries used to perform operations on the results of another query.',
+    description:
+      'Subqueries are nested queries used to perform operations on the results of another query.',
     content: `
       SELECT name
       FROM users
       WHERE age > (SELECT AVG(age) FROM users);
-    `
+    `,
   },
   {
     title: 'Indexes',
     description: 'Indexes are used to speed up the retrieval of data from a database.',
     content: `
       CREATE INDEX idx_users_age ON users(age);
-    `
-  }
+    `,
+  },
 ]
 
 const sections = [
@@ -88,8 +90,8 @@ const sections = [
       'Inserting, updating, and deleting data in a database (Data Manipulation).',
       'Creating and modifying database structures, such as tables and indexes (Database Administration).',
       'Performing complex data analysis and reporting (Data Analysis).',
-      'Interacting with databases in web and desktop applications (Application Development).'
-    ]
+      'Interacting with databases in web and desktop applications (Application Development).',
+    ],
   },
   {
     id: 'history',
@@ -106,7 +108,7 @@ const sections = [
     id: 'syntax',
     title: 'Syntax',
     content: syntaxContent,
-  }
+  },
 ]
 
 const codeExamples = [
@@ -114,7 +116,7 @@ const codeExamples = [
     tab: 'Simple Query',
     code: `
       SELECT name, age FROM users WHERE age > 30;
-    `
+    `,
   },
   {
     tab: 'Join Query',
@@ -122,7 +124,7 @@ const codeExamples = [
       SELECT users.name, orders.amount
       FROM users
       JOIN orders ON users.id = orders.user_id;
-    `
+    `,
   },
   {
     tab: 'Subquery',
@@ -130,43 +132,46 @@ const codeExamples = [
       SELECT name
       FROM users
       WHERE age > (SELECT AVG(age) FROM users);
-    `
+    `,
   },
   {
     tab: 'Insert Data',
     code: `
       INSERT INTO users (name, age) VALUES ('John Doe', 30);
-    `
+    `,
   },
   {
     tab: 'Update Data',
     code: `
       UPDATE users SET age = 31 WHERE name = 'John Doe';
-    `
+    `,
   },
   {
     tab: 'Delete Data',
     code: `
       DELETE FROM users WHERE name = 'John Doe';
-    `
-  }
+    `,
+  },
 ]
 
 const faqs = [
   {
     id: 1,
     question: 'What is SQL?',
-    answer: 'SQL (Structured Query Language) is a standard programming language specifically designed for managing and manipulating relational databases.',
+    answer:
+      'SQL (Structured Query Language) is a standard programming language specifically designed for managing and manipulating relational databases.',
   },
   {
     id: 2,
     question: 'Is SQL hard to learn?',
-    answer: 'SQL is well-suited for beginners as it has a simple syntax and is easy to learn and use.',
+    answer:
+      'SQL is well-suited for beginners as it has a simple syntax and is easy to learn and use.',
   },
   {
     id: 3,
     question: 'What are the main uses of SQL?',
-    answer: 'SQL is used for data retrieval, data manipulation, database administration, data analysis, and application development.',
+    answer:
+      'SQL is used for data retrieval, data manipulation, database administration, data analysis, and application development.',
   },
   {
     id: 4,
@@ -176,10 +181,10 @@ const faqs = [
   {
     id: 5,
     question: 'What is the difference between SQL and NoSQL?',
-    answer: 'SQL is used for relational databases with structured data, while NoSQL is used for non-relational databases with unstructured or semi-structured data.',
+    answer:
+      'SQL is used for relational databases with structured data, while NoSQL is used for non-relational databases with unstructured or semi-structured data.',
   },
 ]
-
 </script>
 
 <template>
@@ -210,9 +215,9 @@ const faqs = [
         <div v-else>
           <el-card v-for="(item, index) in syntaxContent" :key="index">
             <p class="cardTitle">{{ item.title }}</p>
-            <br>
+            <br />
             <p>{{ item.description }}</p>
-            <br>
+            <br />
             <pre><code v-html="item.content"></code></pre>
           </el-card>
         </div>
@@ -229,9 +234,9 @@ const faqs = [
         <h2>Language Elements</h2>
         <el-card v-for="(element, index) in languageElementsContent" :key="index">
           <p class="cardTitle">{{ element.title }}</p>
-          <br>
+          <br />
           <p>{{ element.description }}</p>
-          <br>
+          <br />
           <pre><code v-html="element.content"></code></pre>
         </el-card>
       </section>

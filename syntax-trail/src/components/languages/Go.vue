@@ -5,7 +5,7 @@ const title = 'Go'
 const description = [
   'Go, also known as Golang, is a statically typed, compiled programming language designed at Google. It is known for its simplicity, efficiency, and strong concurrency support.',
   'Go is often used for building scalable and high-performance applications, particularly in the areas of web development, cloud services, and distributed systems.',
-  'Go has a clean and concise syntax, making it easy to read and write. It also includes a powerful standard library and built-in support for concurrent programming with goroutines and channels.'
+  'Go has a clean and concise syntax, making it easy to read and write. It also includes a powerful standard library and built-in support for concurrent programming with goroutines and channels.',
 ]
 
 const toc = [
@@ -20,12 +20,13 @@ const toc = [
 const syntaxContent = [
   {
     title: 'Variables',
-    description: 'Variables in Go are defined using the `var` keyword or the shorthand `:=` syntax.',
+    description:
+      'Variables in Go are defined using the `var` keyword or the shorthand `:=` syntax.',
     content: `
       var x int = 10
       y := 20
       z := "Hello, World!"
-    `
+    `,
   },
   {
     title: 'Functions',
@@ -38,7 +39,7 @@ const syntaxContent = [
       func greet() {
         fmt.Println("Hello, World!")
       }
-    `
+    `,
   },
   {
     title: 'Structs',
@@ -54,11 +55,12 @@ const syntaxContent = [
       }
 
       john := Person{Name: "John", Age: 30}
-    `
+    `,
   },
   {
     title: 'Packages',
-    description: 'Go supports modular programming with packages. Use the `import` statement to include packages.',
+    description:
+      'Go supports modular programming with packages. Use the `import` statement to include packages.',
     content: `
       import (
         "fmt"
@@ -68,8 +70,8 @@ const syntaxContent = [
       func main() {
         fmt.Println("Current time:", time.Now())
       }
-    `
-  }
+    `,
+  },
 ]
 
 const languageElementsContent = [
@@ -86,7 +88,7 @@ const languageElementsContent = [
         fmt.Println(j)
         j++
       }
-    `
+    `,
   },
   {
     title: 'Conditions',
@@ -98,7 +100,7 @@ const languageElementsContent = [
       } else {
         fmt.Println("x is 10 or less")
       }
-    `
+    `,
   },
   {
     title: 'Error Handling',
@@ -117,8 +119,8 @@ const languageElementsContent = [
       } else {
         fmt.Println("Result:", result)
       }
-    `
-  }
+    `,
+  },
 ]
 
 const sections = [
@@ -133,8 +135,8 @@ const sections = [
       'Developing cloud-based applications and services (Cloud Services).',
       'Creating distributed systems and microservices (Distributed Systems).',
       'Building tools for DevOps and infrastructure management (DevOps Tools).',
-      'Developing network applications and protocols (Networking).'
-    ]
+      'Developing network applications and protocols (Networking).',
+    ],
   },
   {
     id: 'history',
@@ -151,7 +153,7 @@ const sections = [
     id: 'syntax',
     title: 'Syntax',
     content: syntaxContent,
-  }
+  },
 ]
 
 const codeExamples = [
@@ -170,7 +172,7 @@ const codeExamples = [
           fmt.Print(" ", i)
         }
       }
-    `
+    `,
   },
   {
     tab: 'Asynchronous',
@@ -198,7 +200,7 @@ const codeExamples = [
       func log(start time.Time, msg string) {
         fmt.Printf("%s after %.2fs\n", msg, time.Since(start).Seconds())
       }
-    `
+    `,
   },
   {
     tab: 'Object-oriented',
@@ -247,7 +249,7 @@ const codeExamples = [
         sam.eat()  // An implementation of an interface function
         sam.pay(10)  // A default implementation in an interface
       }
-    `
+    `,
   },
   {
     tab: 'Functional',
@@ -301,7 +303,7 @@ const codeExamples = [
         sort.Strings(senderList)
         fmt.Println(senderList)  // [Adam, Ma]
       }
-    `
+    `,
   },
   {
     tab: 'Ideal for tests',
@@ -338,38 +340,42 @@ const codeExamples = [
           t.Error("Computation failed")
         }
       }
-    `
-  }
+    `,
+  },
 ]
 
 const faqs = [
   {
     id: 1,
     question: 'What is Go?',
-    answer: 'Go, also known as Golang, is a statically typed, compiled programming language designed at Google.',
+    answer:
+      'Go, also known as Golang, is a statically typed, compiled programming language designed at Google.',
   },
   {
     id: 2,
     question: 'Is Go hard to learn?',
-    answer: 'Go is well-suited for beginners as it has a simple syntax and is easy to learn and use.',
+    answer:
+      'Go is well-suited for beginners as it has a simple syntax and is easy to learn and use.',
   },
   {
     id: 3,
     question: 'What are the main uses of Go?',
-    answer: 'Go is used in web development, cloud services, distributed systems, DevOps tools, and networking.',
+    answer:
+      'Go is used in web development, cloud services, distributed systems, DevOps tools, and networking.',
   },
   {
     id: 4,
     question: 'What are some popular Go libraries and frameworks?',
-    answer: 'Popular Go libraries and frameworks include Gin, Echo, and Revel for web development, and gRPC for networking.',
+    answer:
+      'Popular Go libraries and frameworks include Gin, Echo, and Revel for web development, and gRPC for networking.',
   },
   {
     id: 5,
     question: 'What is the difference between Go and Python?',
-    answer: 'Go is a statically typed, compiled language known for its performance and concurrency support, while Python is a dynamically typed, interpreted language known for its simplicity and versatility.',
+    answer:
+      'Go is a statically typed, compiled language known for its performance and concurrency support, while Python is a dynamically typed, interpreted language known for its simplicity and versatility.',
   },
 ]
-
 </script>
 
 <template>
@@ -400,9 +406,9 @@ const faqs = [
         <div v-else>
           <el-card v-for="(item, index) in syntaxContent" :key="index">
             <p class="cardTitle">{{ item.title }}</p>
-            <br>
+            <br />
             <p>{{ item.description }}</p>
-            <br>
+            <br />
             <pre><code v-html="item.content"></code></pre>
           </el-card>
         </div>
@@ -419,9 +425,9 @@ const faqs = [
         <h2>Language Elements</h2>
         <el-card v-for="(element, index) in languageElementsContent" :key="index">
           <p class="cardTitle">{{ element.title }}</p>
-          <br>
+          <br />
           <p>{{ element.description }}</p>
-          <br>
+          <br />
           <pre><code v-html="element.content"></code></pre>
         </el-card>
       </section>

@@ -5,7 +5,7 @@ const title = 'Rust'
 const description = [
   'Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety. It was designed by Mozilla Research and first released in 2010.',
   'Rust is known for its memory safety features, achieved without a garbage collector. It ensures safe memory management through a system of ownership with a set of rules that the compiler checks at compile time.',
-  'Rust is used for a wide range of applications, from operating systems and game engines to web servers and blockchain technology.'
+  'Rust is used for a wide range of applications, from operating systems and game engines to web servers and blockchain technology.',
 ]
 
 const toc = [
@@ -20,12 +20,13 @@ const toc = [
 const syntaxContent = [
   {
     title: 'Variables',
-    description: 'Variables in Rust are immutable by default and can be made mutable with the `mut` keyword.',
+    description:
+      'Variables in Rust are immutable by default and can be made mutable with the `mut` keyword.',
     content: `
       let x = 10;
       let mut y = 20;
       let z = "Hello, World!";
-    `
+    `,
   },
   {
     title: 'Functions',
@@ -38,7 +39,7 @@ const syntaxContent = [
       fn greet() {
         println!("Hello, World!");
       }
-    `
+    `,
   },
   {
     title: 'Structs',
@@ -56,11 +57,12 @@ const syntaxContent = [
       }
 
       let john = Person { name: String::from("John"), age: 30 };
-    `
+    `,
   },
   {
     title: 'Modules',
-    description: 'Rust supports modular programming with modules. Use the `mod` keyword to define a module.',
+    description:
+      'Rust supports modular programming with modules. Use the `mod` keyword to define a module.',
     content: `
       mod my_module {
         pub fn my_function() {
@@ -71,14 +73,15 @@ const syntaxContent = [
       fn main() {
         my_module::my_function();
       }
-    `
-  }
+    `,
+  },
 ]
 
 const languageElementsContent = [
   {
     title: 'Loops',
-    description: 'Loops are used to repeat a block of code. Rust has `loop`, `while`, and `for` loops.',
+    description:
+      'Loops are used to repeat a block of code. Rust has `loop`, `while`, and `for` loops.',
     content: `
       for i in 0..5 {
         println!("{}", i);
@@ -89,7 +92,7 @@ const languageElementsContent = [
         println!("{}", j);
         j += 1;
       }
-    `
+    `,
   },
   {
     title: 'Conditions',
@@ -101,7 +104,7 @@ const languageElementsContent = [
       } else {
         println!("x is 10 or less");
       }
-    `
+    `,
   },
   {
     title: 'Error Handling',
@@ -119,8 +122,8 @@ const languageElementsContent = [
         Ok(result) => println!("Result: {}", result),
         Err(e) => println!("Error: {}", e),
       }
-    `
-  }
+    `,
+  },
 ]
 
 const sections = [
@@ -135,8 +138,8 @@ const sections = [
       'Developing high-performance web applications with frameworks like Rocket and Actix (Web Development).',
       'Creating blockchain technology and cryptocurrencies (Blockchain).',
       'Programming microcontrollers and other embedded devices (Embedded Systems).',
-      'Creating fast and reliable command line tools (Command Line Tools).'
-    ]
+      'Creating fast and reliable command line tools (Command Line Tools).',
+    ],
   },
   {
     id: 'history',
@@ -153,7 +156,7 @@ const sections = [
     id: 'syntax',
     title: 'Syntax',
     content: syntaxContent,
-  }
+  },
 ]
 
 const codeExamples = [
@@ -168,7 +171,7 @@ const codeExamples = [
           print!(" {}", i);
         }
       }
-    `
+    `,
   },
   {
     tab: 'Asynchronous',
@@ -200,7 +203,7 @@ const codeExamples = [
       async fn run() {
         main().await;
       }
-    `
+    `,
   },
   {
     tab: 'Object-oriented',
@@ -249,7 +252,7 @@ const codeExamples = [
         sam.eat();  // An implementation of an interface function
         sam.pay(10);  // A default implementation in an interface
       }
-    `
+    `,
   },
   {
     tab: 'Functional',
@@ -288,7 +291,7 @@ const codeExamples = [
         senders.dedup();
         println!("{:?}", senders);  // ["Adam", "Ma"]
       }
-    `
+    `,
   },
   {
     tab: 'Ideal for tests',
@@ -322,25 +325,28 @@ const codeExamples = [
           assert!(compute(), "Computation failed");
         }
       }
-    `
-  }
+    `,
+  },
 ]
 
 const faqs = [
   {
     id: 1,
     question: 'What is Rust?',
-    answer: 'Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.',
+    answer:
+      'Rust is a systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.',
   },
   {
     id: 2,
     question: 'Is Rust hard to learn?',
-    answer: 'Rust has a steep learning curve due to its strict compiler rules, but it is well-suited for beginners who want to learn safe and efficient programming.',
+    answer:
+      'Rust has a steep learning curve due to its strict compiler rules, but it is well-suited for beginners who want to learn safe and efficient programming.',
   },
   {
     id: 3,
     question: 'What are the main uses of Rust?',
-    answer: 'Rust is used in systems programming, web development, blockchain, embedded systems, and command line tools.',
+    answer:
+      'Rust is used in systems programming, web development, blockchain, embedded systems, and command line tools.',
   },
   {
     id: 4,
@@ -350,10 +356,10 @@ const faqs = [
   {
     id: 5,
     question: 'What is the difference between Rust and C++?',
-    answer: 'Rust is designed to be safer and more concurrent than C++, with a focus on memory safety and thread safety without a garbage collector.',
+    answer:
+      'Rust is designed to be safer and more concurrent than C++, with a focus on memory safety and thread safety without a garbage collector.',
   },
 ]
-
 </script>
 
 <template>
@@ -384,9 +390,9 @@ const faqs = [
         <div v-else>
           <el-card v-for="(item, index) in syntaxContent" :key="index">
             <p class="cardTitle">{{ item.title }}</p>
-            <br>
+            <br />
             <p>{{ item.description }}</p>
-            <br>
+            <br />
             <pre><code v-html="item.content"></code></pre>
           </el-card>
         </div>
@@ -403,9 +409,9 @@ const faqs = [
         <h2>Language Elements</h2>
         <el-card v-for="(element, index) in languageElementsContent" :key="index">
           <p class="cardTitle">{{ element.title }}</p>
-          <br>
+          <br />
           <p>{{ element.description }}</p>
-          <br>
+          <br />
           <pre><code v-html="element.content"></code></pre>
         </el-card>
       </section>

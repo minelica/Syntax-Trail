@@ -5,7 +5,7 @@ const title = 'C++'
 const description = [
   'C++ is a high-level, general-purpose programming language created as an extension of the C programming language. It is known for its performance, efficiency, and flexibility, making it suitable for a wide range of applications.',
   'C++ supports multiple programming paradigms, including procedural, object-oriented, and generic programming. It provides low-level memory manipulation features, which are essential for system programming and resource-constrained applications.',
-  'C++ is widely used in various domains, including system software, game development, real-time simulations, and high-performance computing.'
+  'C++ is widely used in various domains, including system software, game development, real-time simulations, and high-performance computing.',
 ]
 
 const toc = [
@@ -20,17 +20,19 @@ const toc = [
 const syntaxContent = [
   {
     title: 'Variables',
-    description: 'Variables in C++ can be defined using different data types such as int, float, double, and std::string.',
+    description:
+      'Variables in C++ can be defined using different data types such as int, float, double, and std::string.',
     content: `
       int x = 10;
       float y = 20.5f;
       double z = 30.5;
       std::string name = "John";
-    `
+    `,
   },
   {
     title: 'Functions',
-    description: 'Functions in C++ are defined using the return type, function name, and parameters.',
+    description:
+      'Functions in C++ are defined using the return type, function name, and parameters.',
     content: `
       int add(int a, int b) {
         return a + b;
@@ -39,11 +41,12 @@ const syntaxContent = [
       void greet() {
         std::cout << "Hello, World!" << std::endl;
       }
-    `
+    `,
   },
   {
     title: 'Classes',
-    description: 'Classes are defined using the `class` keyword. A class can contain fields, methods, and constructors.',
+    description:
+      'Classes are defined using the `class` keyword. A class can contain fields, methods, and constructors.',
     content: `
       class Person {
       private:
@@ -59,7 +62,7 @@ const syntaxContent = [
       };
 
       Person john("John", 30);
-    `
+    `,
   },
   {
     title: 'Templates',
@@ -75,8 +78,8 @@ const syntaxContent = [
         std::cout << add(3.5, 4.5) << std::endl;  // 8.0
         return 0;
       }
-    `
-  }
+    `,
+  },
 ]
 
 const languageElementsContent = [
@@ -93,7 +96,7 @@ const languageElementsContent = [
         std::cout << j << std::endl;
         j++;
       }
-    `
+    `,
   },
   {
     title: 'Conditions',
@@ -105,7 +108,7 @@ const languageElementsContent = [
       } else {
         std::cout << "x is 10 or less" << std::endl;
       }
-    `
+    `,
   },
   {
     title: 'Exception Handling',
@@ -116,8 +119,8 @@ const languageElementsContent = [
       } catch (const std::exception& e) {
         std::cout << "Exception: " << e.what() << std::endl;
       }
-    `
-  }
+    `,
+  },
 ]
 
 const sections = [
@@ -132,8 +135,8 @@ const sections = [
       'Creating high-performance games (Game Development).',
       'Performing real-time simulations (Real-time Simulations).',
       'Conducting scientific computing and financial modeling (High-performance Computing).',
-      'Programming embedded systems and IoT devices (Embedded Systems).'
-    ]
+      'Programming embedded systems and IoT devices (Embedded Systems).',
+    ],
   },
   {
     id: 'history',
@@ -150,7 +153,7 @@ const sections = [
     id: 'syntax',
     title: 'Syntax',
     content: syntaxContent,
-  }
+  },
 ]
 
 const codeExamples = [
@@ -169,7 +172,7 @@ const codeExamples = [
         std::cout << std::endl;
         return 0;
       }
-    `
+    `,
   },
   {
     tab: 'Asynchronous',
@@ -201,7 +204,7 @@ const codeExamples = [
         log(start, "Liftoff!");
         return 0;
       }
-    `
+    `,
   },
   {
     tab: 'Object-oriented',
@@ -255,7 +258,7 @@ const codeExamples = [
         sam.pay(10);  // A default implementation in an interface
         return 0;
       }
-    `
+    `,
   },
   {
     tab: 'Functional',
@@ -307,7 +310,7 @@ const codeExamples = [
 
         return 0;
       }
-    `
+    `,
   },
   {
     tab: 'Ideal for tests',
@@ -339,25 +342,28 @@ const codeExamples = [
         ::testing::InitGoogleTest(&argc, argv);
         return RUN_ALL_TESTS();
       }
-    `
-  }
+    `,
+  },
 ]
 
 const faqs = [
   {
     id: 1,
     question: 'What is C++?',
-    answer: 'C++ is a high-level, general-purpose programming language created as an extension of the C programming language.',
+    answer:
+      'C++ is a high-level, general-purpose programming language created as an extension of the C programming language.',
   },
   {
     id: 2,
     question: 'Is C++ hard to learn?',
-    answer: 'C++ can be challenging for beginners due to its complexity and low-level features, but it is a powerful language once mastered.',
+    answer:
+      'C++ can be challenging for beginners due to its complexity and low-level features, but it is a powerful language once mastered.',
   },
   {
     id: 3,
     question: 'What are the main uses of C++?',
-    answer: 'C++ is used in system programming, game development, real-time simulations, high-performance computing, and embedded systems.',
+    answer:
+      'C++ is used in system programming, game development, real-time simulations, high-performance computing, and embedded systems.',
   },
   {
     id: 4,
@@ -367,10 +373,10 @@ const faqs = [
   {
     id: 5,
     question: 'What is the difference between C and C++?',
-    answer: 'C++ is an extension of C that adds object-oriented features, templates, and other enhancements, while maintaining compatibility with C.',
+    answer:
+      'C++ is an extension of C that adds object-oriented features, templates, and other enhancements, while maintaining compatibility with C.',
   },
 ]
-
 </script>
 
 <template>
@@ -401,9 +407,9 @@ const faqs = [
         <div v-else>
           <el-card v-for="(item, index) in syntaxContent" :key="index">
             <p class="cardTitle">{{ item.title }}</p>
-            <br>
+            <br />
             <p>{{ item.description }}</p>
-            <br>
+            <br />
             <pre><code v-html="item.content"></code></pre>
           </el-card>
         </div>
@@ -420,9 +426,9 @@ const faqs = [
         <h2>Language Elements</h2>
         <el-card v-for="(element, index) in languageElementsContent" :key="index">
           <p class="cardTitle">{{ element.title }}</p>
-          <br>
+          <br />
           <p>{{ element.description }}</p>
-          <br>
+          <br />
           <pre><code v-html="element.content"></code></pre>
         </el-card>
       </section>

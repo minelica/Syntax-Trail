@@ -5,7 +5,7 @@ const title = 'JavaScript'
 const description = [
   'JavaScript, often abbreviated as JS, is a programming language and core technology of the Web, alongside HTML and CSS. 99% of websites use JavaScript on the client side for webpage behavior.',
   'Web browsers have a dedicated JavaScript engine that executes the client code. These engines are also utilized in some servers and a variety of apps. The most popular runtime system for non-browser usage is Node.js.',
-  'Although Java and JavaScript are similar in name and syntax, the two languages are distinct and differ greatly in design.'
+  'Although Java and JavaScript are similar in name and syntax, the two languages are distinct and differ greatly in design.',
 ]
 
 const toc = [
@@ -25,7 +25,7 @@ const syntaxContent = [
       var x = 10;
       let y = 20;
       const z = 30;
-    `
+    `,
   },
   {
     title: 'Functions',
@@ -36,7 +36,7 @@ const syntaxContent = [
       }
 
       const subtract = (a, b) => a - b;
-    `
+    `,
   },
   {
     title: 'Classes',
@@ -54,7 +54,7 @@ const syntaxContent = [
       }
 
       const john = new Person('John', 30);
-    `
+    `,
   },
   {
     title: 'Modules',
@@ -70,8 +70,8 @@ const syntaxContent = [
       import { myVariable, myFunction } from './myModule.js';
       console.log(myVariable); // 42
       console.log(myFunction()); // Hello, World!
-    `
-  }
+    `,
+  },
 ]
 
 const languageElementsContent = [
@@ -88,7 +88,7 @@ const languageElementsContent = [
         console.log(j);
         j++;
       }
-    `
+    `,
   },
   {
     title: 'Conditions',
@@ -99,7 +99,7 @@ const languageElementsContent = [
       } else {
         console.log('x is 10 or less');
       }
-    `
+    `,
   },
   {
     title: 'Events',
@@ -108,15 +108,15 @@ const languageElementsContent = [
       document.getElementById('myButton').addEventListener('click', function() {
         alert('Button clicked!');
       });
-    `
+    `,
   },
   {
     title: 'DOM Manipulation',
     description: 'DOM Manipulation is used to interact with and modify the HTML document.',
     content: `
       document.getElementById('myDiv').innerHTML = 'Hello, World!';
-    `
-  }
+    `,
+  },
 ]
 
 const sections = [
@@ -124,7 +124,7 @@ const sections = [
     id: 'usage',
     title: 'Usage',
     content:
-      'JavaScript is the dominant client-side scripting language of the Web, with 99% of all websites using it for this purpose. Scripts are embedded in or included from HTML documents and interact with the DOM. All major web browsers have a built-in JavaScript engine that executes the code on the user\'s device.',
+      "JavaScript is the dominant client-side scripting language of the Web, with 99% of all websites using it for this purpose. Scripts are embedded in or included from HTML documents and interact with the DOM. All major web browsers have a built-in JavaScript engine that executes the code on the user's device.",
     bulletPoints: [
       'Loading new web page content without reloading the page, via Ajax or a WebSocket.',
       'Web page animations, such as fading objects in and out, resizing, and moving them.',
@@ -132,10 +132,10 @@ const sections = [
       'Controlling the playback of streaming media.',
       'Generating pop-up ads or alert boxes.',
       'Validating input values of a web form before the data is sent to a web server.',
-      'Logging data about the user\'s behavior then sending it to a server.',
+      "Logging data about the user's behavior then sending it to a server.",
       'Redirecting a user to another page.',
-      'Storing and retrieving data on the user\'s device, via the storage or IndexedDB standards.'
-    ]
+      "Storing and retrieving data on the user's device, via the storage or IndexedDB standards.",
+    ],
   },
   {
     id: 'history',
@@ -171,7 +171,7 @@ const codeExamples = [
       }
 
       main();
-    `
+    `,
   },
   {
     tab: 'Asynchronous',
@@ -200,7 +200,7 @@ const codeExamples = [
       }
 
       main();
-    `
+    `,
   },
   {
     tab: 'Object-oriented',
@@ -255,7 +255,7 @@ const codeExamples = [
       }
 
       main();
-    `
+    `,
   },
   {
     tab: 'Functional',
@@ -294,7 +294,7 @@ const codeExamples = [
       }
 
       main();
-    `
+    `,
   },
   {
     tab: 'Ideal for tests',
@@ -325,8 +325,8 @@ const codeExamples = [
               return compute();
           }).not.toThrow();
       });
-    `
-  }
+    `,
+  },
 ]
 
 const faqs = [
@@ -343,32 +343,38 @@ const faqs = [
   {
     id: 3,
     question: 'What is the difference between Java and JavaScript?',
-    answer: 'Although Java and JavaScript have similar names, they are distinct programming languages with different designs and purposes.',
+    answer:
+      'Although Java and JavaScript have similar names, they are distinct programming languages with different designs and purposes.',
   },
   {
     id: 4,
     question: 'What are the main uses of JavaScript?',
-    answer: 'JavaScript is primarily used for web development, but it can also be used for server-side programming, mobile app development, and desktop applications.',
+    answer:
+      'JavaScript is primarily used for web development, but it can also be used for server-side programming, mobile app development, and desktop applications.',
   },
   {
     id: 5,
     question: 'What are some key features of JavaScript?',
-    answer: 'JavaScript supports features like DOM manipulation, event handling, asynchronous programming, object-oriented programming, and more.',
+    answer:
+      'JavaScript supports features like DOM manipulation, event handling, asynchronous programming, object-oriented programming, and more.',
   },
   {
     id: 6,
     question: 'What are ECMAScript and ES6?',
-    answer: 'ECMAScript is the standard on which JavaScript is based. ES6 (also known as ECMAScript 2015) is a version of the standard that introduced many new features and improvements.',
+    answer:
+      'ECMAScript is the standard on which JavaScript is based. ES6 (also known as ECMAScript 2015) is a version of the standard that introduced many new features and improvements.',
   },
   {
     id: 7,
     question: 'How can I include JavaScript in my webpage?',
-    answer: 'JavaScript can be embedded directly in HTML files within <script> tags or by linking to external JavaScript files.',
+    answer:
+      'JavaScript can be embedded directly in HTML files within <script> tags or by linking to external JavaScript files.',
   },
   {
     id: 8,
     question: 'What are some popular JavaScript libraries and frameworks?',
-    answer: 'Popular JavaScript libraries and frameworks include jQuery, React, Angular, and Vue.js.',
+    answer:
+      'Popular JavaScript libraries and frameworks include jQuery, React, Angular, and Vue.js.',
   },
 ]
 </script>
@@ -378,7 +384,7 @@ const faqs = [
     <!-- Header -->
     <header class="hero">
       <h1>{{ title }}</h1>
-      <br>
+      <br />
       <div>
         <p v-for="(paragraph, index) in description" :key="index">{{ paragraph }}</p>
       </div>
@@ -402,14 +408,14 @@ const faqs = [
         <div v-else>
           <el-card v-for="(item, index) in syntaxContent" :key="index">
             <p class="cardTitle">{{ item.title }}</p>
-            <br>
+            <br />
             <p>{{ item.description }}</p>
-            <br>
+            <br />
             <pre><code v-html="item.content"></code></pre>
           </el-card>
         </div>
         <div v-if="section.bulletPoints">
-          <br>
+          <br />
           <h3>Examples of scripted behavior:</h3>
           <ul>
             <li v-for="(point, index) in section.bulletPoints" :key="index">{{ point }}</li>
@@ -422,9 +428,9 @@ const faqs = [
         <h2>Language Elements</h2>
         <el-card v-for="(element, index) in languageElementsContent" :key="index">
           <p class="cardTitle">{{ element.title }}</p>
-          <br>
+          <br />
           <p>{{ element.description }}</p>
-          <br>
+          <br />
           <pre><code v-html="element.content"></code></pre>
         </el-card>
       </section>

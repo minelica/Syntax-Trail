@@ -5,7 +5,7 @@ const title = 'C#'
 const description = [
   'C# (pronounced "C-sharp") is a modern, object-oriented programming language developed by Microsoft. It is part of the .NET framework and is used for a wide range of applications, including web development, desktop applications, and game development.',
   'C# is designed to be simple, powerful, and type-safe. It has a rich set of features, including garbage collection, exception handling, and support for asynchronous programming.',
-  'C# is known for its strong integration with the .NET framework, which provides a large library of pre-built classes and functions for common programming tasks.'
+  'C# is known for its strong integration with the .NET framework, which provides a large library of pre-built classes and functions for common programming tasks.',
 ]
 
 const toc = [
@@ -20,17 +20,19 @@ const toc = [
 const syntaxContent = [
   {
     title: 'Variables',
-    description: 'Variables in C# can be defined using different data types such as int, float, double, and string.',
+    description:
+      'Variables in C# can be defined using different data types such as int, float, double, and string.',
     content: `
       int x = 10;
       float y = 20.5f;
       double z = 30.5;
       string name = "John";
-    `
+    `,
   },
   {
     title: 'Functions',
-    description: 'Functions (or methods) in C# are defined within classes using the `void` keyword for methods that do not return a value, or the return type for methods that return a value.',
+    description:
+      'Functions (or methods) in C# are defined within classes using the `void` keyword for methods that do not return a value, or the return type for methods that return a value.',
     content: `
       public int Add(int a, int b) {
         return a + b;
@@ -39,11 +41,12 @@ const syntaxContent = [
       public void Greet() {
         Console.WriteLine("Hello, World!");
       }
-    `
+    `,
   },
   {
     title: 'Classes',
-    description: 'Classes are defined using the `class` keyword. A class can contain fields, methods, and constructors.',
+    description:
+      'Classes are defined using the `class` keyword. A class can contain fields, methods, and constructors.',
     content: `
       public class Person {
         private string name;
@@ -60,7 +63,7 @@ const syntaxContent = [
       }
 
       Person john = new Person("John", 30);
-    `
+    `,
   },
   {
     title: 'Modules',
@@ -73,8 +76,8 @@ const syntaxContent = [
           }
         }
       }
-    `
-  }
+    `,
+  },
 ]
 
 const languageElementsContent = [
@@ -91,7 +94,7 @@ const languageElementsContent = [
         Console.WriteLine(j);
         j++;
       }
-    `
+    `,
   },
   {
     title: 'Conditions',
@@ -103,7 +106,7 @@ const languageElementsContent = [
       } else {
         Console.WriteLine("x is 10 or less");
       }
-    `
+    `,
   },
   {
     title: 'Exception Handling',
@@ -116,8 +119,8 @@ const languageElementsContent = [
       } finally {
         Console.WriteLine("This will always execute");
       }
-    `
-  }
+    `,
+  },
 ]
 
 const sections = [
@@ -132,8 +135,8 @@ const sections = [
       'Developing Windows desktop applications with Windows Forms and WPF (Desktop Applications).',
       'Creating games with the Unity game engine (Game Development).',
       'Developing cross-platform mobile applications with Xamarin (Mobile Applications).',
-      'Building cloud-based applications and services with Azure (Cloud Services).'
-    ]
+      'Building cloud-based applications and services with Azure (Cloud Services).',
+    ],
   },
   {
     id: 'history',
@@ -150,7 +153,7 @@ const sections = [
     id: 'syntax',
     title: 'Syntax',
     content: syntaxContent,
-  }
+  },
 ]
 
 const codeExamples = [
@@ -169,7 +172,7 @@ const codeExamples = [
           }
         }
       }
-    `
+    `,
   },
   {
     tab: 'Asynchronous',
@@ -198,7 +201,7 @@ const codeExamples = [
           Console.WriteLine($"{msg} after {(DateTime.Now - start).TotalSeconds:F2}s");
         }
       }
-    `
+    `,
   },
   {
     tab: 'Object-oriented',
@@ -251,7 +254,7 @@ const codeExamples = [
           sam.Pay(10);  // A default implementation in an interface
         }
       }
-    `
+    `,
   },
   {
     tab: 'Functional',
@@ -297,7 +300,7 @@ const codeExamples = [
           Console.WriteLine(string.Join(", ", senders));  // Adam, Ma
         }
       }
-    `
+    `,
   },
   {
     tab: 'Ideal for tests',
@@ -330,38 +333,42 @@ const codeExamples = [
           return true;
         }
       }
-    `
-  }
+    `,
+  },
 ]
 
 const faqs = [
   {
     id: 1,
     question: 'What is C#?',
-    answer: 'C# (pronounced "C-sharp") is a modern, object-oriented programming language developed by Microsoft.',
+    answer:
+      'C# (pronounced "C-sharp") is a modern, object-oriented programming language developed by Microsoft.',
   },
   {
     id: 2,
     question: 'Is C# hard to learn?',
-    answer: 'C# is well-suited for beginners as it has a simple syntax and is easy to learn and use.',
+    answer:
+      'C# is well-suited for beginners as it has a simple syntax and is easy to learn and use.',
   },
   {
     id: 3,
     question: 'What are the main uses of C#?',
-    answer: 'C# is used in web development, desktop applications, game development, mobile applications, and cloud services.',
+    answer:
+      'C# is used in web development, desktop applications, game development, mobile applications, and cloud services.',
   },
   {
     id: 4,
     question: 'What are some popular C# libraries and frameworks?',
-    answer: 'Popular C# libraries and frameworks include ASP.NET, Windows Forms, WPF, Unity, and Xamarin.',
+    answer:
+      'Popular C# libraries and frameworks include ASP.NET, Windows Forms, WPF, Unity, and Xamarin.',
   },
   {
     id: 5,
     question: 'What is the difference between C# and C++?',
-    answer: 'C# and C++ are distinct programming languages with different designs and purposes. C# is managed and runs on the .NET framework, while C++ is unmanaged and is used for system-level programming.',
+    answer:
+      'C# and C++ are distinct programming languages with different designs and purposes. C# is managed and runs on the .NET framework, while C++ is unmanaged and is used for system-level programming.',
   },
 ]
-
 </script>
 
 <template>
@@ -392,9 +399,9 @@ const faqs = [
         <div v-else>
           <el-card v-for="(item, index) in syntaxContent" :key="index">
             <p class="cardTitle">{{ item.title }}</p>
-            <br>
+            <br />
             <p>{{ item.description }}</p>
-            <br>
+            <br />
             <pre><code v-html="item.content"></code></pre>
           </el-card>
         </div>
@@ -411,9 +418,9 @@ const faqs = [
         <h2>Language Elements</h2>
         <el-card v-for="(element, index) in languageElementsContent" :key="index">
           <p class="cardTitle">{{ element.title }}</p>
-          <br>
+          <br />
           <p>{{ element.description }}</p>
-          <br>
+          <br />
           <pre><code v-html="element.content"></code></pre>
         </el-card>
       </section>

@@ -5,7 +5,7 @@ const title = 'Ruby'
 const description = [
   'Ruby is a dynamic, open-source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.',
   'Ruby is often used for web development, particularly with the Ruby on Rails framework, which is known for its convention over configuration approach and rapid development capabilities.',
-  'Ruby supports multiple programming paradigms, including procedural, object-oriented, and functional programming. It also has a rich set of built-in functions and libraries.'
+  'Ruby supports multiple programming paradigms, including procedural, object-oriented, and functional programming. It also has a rich set of built-in functions and libraries.',
 ]
 
 const toc = [
@@ -20,12 +20,13 @@ const toc = [
 const syntaxContent = [
   {
     title: 'Variables',
-    description: 'Variables in Ruby are dynamically typed and do not require explicit type declarations.',
+    description:
+      'Variables in Ruby are dynamically typed and do not require explicit type declarations.',
     content: `
       x = 10
       y = 20.5
       z = "Hello, World!"
-    `
+    `,
   },
   {
     title: 'Functions',
@@ -38,11 +39,12 @@ const syntaxContent = [
       def greet
         puts "Hello, World!"
       end
-    `
+    `,
   },
   {
     title: 'Classes',
-    description: 'Classes are defined using the `class` keyword. A class can contain methods and instance variables.',
+    description:
+      'Classes are defined using the `class` keyword. A class can contain methods and instance variables.',
     content: `
       class Person
         def initialize(name, age)
@@ -56,7 +58,7 @@ const syntaxContent = [
       end
 
       john = Person.new("John", 30)
-    `
+    `,
   },
   {
     title: 'Modules',
@@ -69,8 +71,8 @@ const syntaxContent = [
       end
 
       puts MyModule.my_method
-    `
-  }
+    `,
+  },
 ]
 
 const languageElementsContent = [
@@ -87,7 +89,7 @@ const languageElementsContent = [
         puts j
         j += 1
       end
-    `
+    `,
   },
   {
     title: 'Conditions',
@@ -99,7 +101,7 @@ const languageElementsContent = [
       else
         puts "x is 10 or less"
       end
-    `
+    `,
   },
   {
     title: 'Exception Handling',
@@ -112,8 +114,8 @@ const languageElementsContent = [
       ensure
         puts "This will always execute"
       end
-    `
-  }
+    `,
+  },
 ]
 
 const sections = [
@@ -127,8 +129,8 @@ const sections = [
       'Building server-side web applications with Ruby on Rails (Web Development).',
       'Writing scripts to automate tasks (Scripting).',
       'Performing data analysis and processing tasks (Data Processing).',
-      'Creating rapid prototypes (Prototyping).'
-    ]
+      'Creating rapid prototypes (Prototyping).',
+    ],
   },
   {
     id: 'history',
@@ -145,7 +147,7 @@ const sections = [
     id: 'syntax',
     title: 'Syntax',
     content: syntaxContent,
-  }
+  },
 ]
 
 const codeExamples = [
@@ -158,7 +160,7 @@ const codeExamples = [
       (0..10).each do |i|  # Loop over a range from 0 to 10
         print " #{i}"
       end
-    `
+    `,
   },
   {
     tab: 'Asynchronous',
@@ -175,7 +177,7 @@ const codeExamples = [
 
       threads.each(&:join)
       puts "Liftoff!"
-    `
+    `,
   },
   {
     tab: 'Object-oriented',
@@ -226,7 +228,7 @@ const codeExamples = [
       sam.order  # A member function
       sam.eat  # An implementation of an interface function
       sam.pay(10)  # A default implementation in an interface
-    `
+    `,
   },
   {
     tab: 'Functional',
@@ -246,7 +248,7 @@ const codeExamples = [
       # Who are the senders?
       senders = messages.reject { |msg| msg.body.strip.empty? || msg.is_read }.map(&:sender).uniq.sort
       puts senders.join(", ")  # Adam, Ma
-    `
+    `,
   },
   {
     tab: 'Ideal for tests',
@@ -276,20 +278,22 @@ const codeExamples = [
           expect { compute }.not_to raise_error
         end
       end
-    `
-  }
+    `,
+  },
 ]
 
 const faqs = [
   {
     id: 1,
     question: 'What is Ruby?',
-    answer: 'Ruby is a dynamic, open-source programming language with a focus on simplicity and productivity.',
+    answer:
+      'Ruby is a dynamic, open-source programming language with a focus on simplicity and productivity.',
   },
   {
     id: 2,
     question: 'Is Ruby hard to learn?',
-    answer: 'Ruby is well-suited for beginners as it has a simple syntax and is easy to learn and use.',
+    answer:
+      'Ruby is well-suited for beginners as it has a simple syntax and is easy to learn and use.',
   },
   {
     id: 3,
@@ -304,10 +308,10 @@ const faqs = [
   {
     id: 5,
     question: 'What is the difference between Ruby and Python?',
-    answer: 'Ruby and Python are both high-level, interpreted languages, but they have different design philosophies and syntax.',
+    answer:
+      'Ruby and Python are both high-level, interpreted languages, but they have different design philosophies and syntax.',
   },
 ]
-
 </script>
 
 <template>
@@ -338,9 +342,9 @@ const faqs = [
         <div v-else>
           <el-card v-for="(item, index) in syntaxContent" :key="index">
             <p class="cardTitle">{{ item.title }}</p>
-            <br>
+            <br />
             <p>{{ item.description }}</p>
-            <br>
+            <br />
             <pre><code v-html="item.content"></code></pre>
           </el-card>
         </div>
@@ -357,9 +361,9 @@ const faqs = [
         <h2>Language Elements</h2>
         <el-card v-for="(element, index) in languageElementsContent" :key="index">
           <p class="cardTitle">{{ element.title }}</p>
-          <br>
+          <br />
           <p>{{ element.description }}</p>
-          <br>
+          <br />
           <pre><code v-html="element.content"></code></pre>
         </el-card>
       </section>

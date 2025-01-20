@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { RouterLink } from 'vue-router';
+import { RouterLink } from 'vue-router'
 
 const activeIndex = ref('1')
 const handleSelect = (key: string, keyPath: string[]) => {
@@ -9,8 +9,13 @@ const handleSelect = (key: string, keyPath: string[]) => {
 </script>
 
 <template>
-  <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :ellipsis="false"
-    @select="handleSelect">
+  <el-menu
+    :default-active="activeIndex"
+    class="el-menu-demo"
+    mode="horizontal"
+    :ellipsis="false"
+    @select="handleSelect"
+  >
     <el-menu-item index="0">
       <img src="/src/assets/logo.jpg" style="width: 50px; border-radius: 20px" alt="Logo" />
       <p class="menu_title_st">Syntax Trail</p>
@@ -79,7 +84,7 @@ const handleSelect = (key: string, keyPath: string[]) => {
 </template>
 
 <style>
-.el-menu--horizontal>.el-menu-item:nth-child(1) {
+.el-menu--horizontal > .el-menu-item:nth-child(1) {
   margin-right: auto;
 }
 
@@ -88,28 +93,29 @@ const handleSelect = (key: string, keyPath: string[]) => {
 }
 
 .el-menu--horizontal.el-menu {
-    border-bottom: none !important;
+  border-bottom: none !important;
 }
 
-.el-menu--horizontal>.el-menu-item.is-active {
-    border-bottom: 2px solid #2d3748 !important;
-    color: var(--el-menu-active-color) !important; /* edit */
+.el-menu--horizontal > .el-menu-item.is-active {
+  border-bottom: 2px solid #2d3748 !important;
+  color: var(--el-menu-active-color) !important; /* edit */
 }
 
-.el-menu--horizontal>.el-menu-item a, .el-menu--horizontal>.el-menu-item a:hover {
+.el-menu--horizontal > .el-menu-item a,
+.el-menu--horizontal > .el-menu-item a:hover {
   font-weight: bold;
 }
 
 a:-webkit-any-link {
-    text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 .el-sub-menu__title {
   font-weight: bold;
 }
 
-.el-menu--horizontal>.el-sub-menu.is-active .el-sub-menu__title {
-    border-bottom: 2px solid #2d3748 !important;
+.el-menu--horizontal > .el-sub-menu.is-active .el-sub-menu__title {
+  border-bottom: 2px solid #2d3748 !important;
 }
 
 .el-sub-menu:hover {
@@ -125,6 +131,15 @@ a:-webkit-any-link {
   font-size: 30px;
   font-family: 'Courier New', Courier, monospace;
   margin-left: 30px;
-  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 2px 2px 2px rgba(206,89,55,0);
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #fff,
+    0 0 20px #49ff18,
+    0 0 30px #49ff18,
+    0 0 40px #49ff18,
+    0 0 55px #49ff18,
+    0 0 75px #49ff18,
+    2px 2px 2px rgba(206, 89, 55, 0);
 }
 </style>

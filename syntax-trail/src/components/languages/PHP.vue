@@ -5,7 +5,7 @@ const title = 'PHP'
 const description = [
   'PHP is a popular general-purpose scripting language that is especially suited to web development. It was originally created by Danish-Canadian programmer Rasmus Lerdorf in 1994. The PHP reference implementation is now produced by The PHP Group.',
   'PHP is a server-side scripting language that is embedded in HTML. It is used to manage dynamic content, databases, session tracking, and even build entire e-commerce sites.',
-  'PHP is known for its simplicity, speed, and flexibility. It powers everything from blogs to the most popular websites in the world.'
+  'PHP is known for its simplicity, speed, and flexibility. It powers everything from blogs to the most popular websites in the world.',
 ]
 
 const toc = [
@@ -20,12 +20,13 @@ const toc = [
 const syntaxContent = [
   {
     title: 'Variables',
-    description: 'Variables in PHP are prefixed with a dollar sign ($) and can store different types of data.',
+    description:
+      'Variables in PHP are prefixed with a dollar sign ($) and can store different types of data.',
     content: `
       $x = 10;
       $y = 20.5;
       $z = "Hello, World!";
-    `
+    `,
   },
   {
     title: 'Functions',
@@ -38,11 +39,12 @@ const syntaxContent = [
       function greet() {
         echo "Hello, World!";
       }
-    `
+    `,
   },
   {
     title: 'Classes',
-    description: 'Classes are defined using the \`class\` keyword. A class can contain methods and properties.',
+    description:
+      'Classes are defined using the \`class\` keyword. A class can contain methods and properties.',
     content: `
       class Person {
         private $name;
@@ -59,11 +61,12 @@ const syntaxContent = [
       }
 
       $john = new Person("John", 30);
-    `
+    `,
   },
   {
     title: 'Modules',
-    description: 'PHP supports modular programming with the \`include\` and \`require\` statements.',
+    description:
+      'PHP supports modular programming with the \`include\` and \`require\` statements.',
     content: `
       // In myModule.php
       <?php
@@ -80,8 +83,8 @@ const syntaxContent = [
       echo $myVariable; // 42
       echo myFunction(); // Hello, World!
       ?>
-    `
-  }
+    `,
+  },
 ]
 
 const languageElementsContent = [
@@ -98,7 +101,7 @@ const languageElementsContent = [
         echo $j;
         $j++;
       }
-    `
+    `,
   },
   {
     title: 'Conditions',
@@ -110,7 +113,7 @@ const languageElementsContent = [
       } else {
         echo "x is 10 or less";
       }
-    `
+    `,
   },
   {
     title: 'Exception Handling',
@@ -123,8 +126,8 @@ const languageElementsContent = [
       } finally {
         echo "This will always execute";
       }
-    `
-  }
+    `,
+  },
 ]
 
 const sections = [
@@ -138,8 +141,8 @@ const sections = [
       'Building server-side web applications (Web Development).',
       'Writing scripts to automate tasks (Scripting).',
       'Performing data analysis and processing tasks (Data Processing).',
-      'Powering content management systems like WordPress, Joomla, and Drupal (Content Management Systems).'
-    ]
+      'Powering content management systems like WordPress, Joomla, and Drupal (Content Management Systems).',
+    ],
   },
   {
     id: 'history',
@@ -156,7 +159,7 @@ const sections = [
     id: 'syntax',
     title: 'Syntax',
     content: syntaxContent,
-  }
+  },
 ]
 
 const codeExamples = [
@@ -171,7 +174,7 @@ const codeExamples = [
         echo " $i";
       }
       ?>
-    `
+    `,
   },
   {
     tab: 'Asynchronous',
@@ -198,7 +201,7 @@ const codeExamples = [
         echo "Liftoff!";
       });
       ?>
-    `
+    `,
   },
   {
     tab: 'Object-oriented',
@@ -250,7 +253,7 @@ const codeExamples = [
       $sam->eat();  // An implementation of an interface function
       $sam->pay(10);  // A default implementation in an interface
       ?>
-    `
+    `,
   },
   {
     tab: 'Functional',
@@ -274,7 +277,7 @@ const codeExamples = [
       sort($senders);
       echo implode(", ", $senders);  // Adam, Ma
       ?>
-    `
+    `,
   },
   {
     tab: 'Ideal for tests',
@@ -307,25 +310,28 @@ const codeExamples = [
         }
       }
       ?>
-    `
-  }
+    `,
+  },
 ]
 
 const faqs = [
   {
     id: 1,
     question: 'What is PHP?',
-    answer: 'PHP is a popular general-purpose scripting language that is especially suited to web development.',
+    answer:
+      'PHP is a popular general-purpose scripting language that is especially suited to web development.',
   },
   {
     id: 2,
     question: 'Is PHP hard to learn?',
-    answer: 'PHP is well-suited for beginners as it has a simple syntax and is easy to learn and use.',
+    answer:
+      'PHP is well-suited for beginners as it has a simple syntax and is easy to learn and use.',
   },
   {
     id: 3,
     question: 'What are the main uses of PHP?',
-    answer: 'PHP is used in web development, scripting, data processing, and content management systems.',
+    answer:
+      'PHP is used in web development, scripting, data processing, and content management systems.',
   },
   {
     id: 4,
@@ -335,10 +341,10 @@ const faqs = [
   {
     id: 5,
     question: 'What is the difference between PHP and JavaScript?',
-    answer: 'PHP is a server-side scripting language, while JavaScript is primarily a client-side scripting language. They are often used together to create dynamic web applications.',
+    answer:
+      'PHP is a server-side scripting language, while JavaScript is primarily a client-side scripting language. They are often used together to create dynamic web applications.',
   },
 ]
-
 </script>
 
 <template>
@@ -369,9 +375,9 @@ const faqs = [
         <div v-else>
           <el-card v-for="(item, index) in syntaxContent" :key="index">
             <p class="cardTitle">{{ item.title }}</p>
-            <br>
+            <br />
             <p>{{ item.description }}</p>
-            <br>
+            <br />
             <pre><code v-html="item.content"></code></pre>
           </el-card>
         </div>
@@ -388,9 +394,9 @@ const faqs = [
         <h2>Language Elements</h2>
         <el-card v-for="(element, index) in languageElementsContent" :key="index">
           <p class="cardTitle">{{ element.title }}</p>
-          <br>
+          <br />
           <p>{{ element.description }}</p>
-          <br>
+          <br />
           <pre><code v-html="element.content"></code></pre>
         </el-card>
       </section>

@@ -5,7 +5,7 @@ const title = 'Swift'
 const description = [
   'Swift is a powerful and intuitive programming language for iOS, macOS, watchOS, and tvOS app development. It was introduced by Apple in 2014 and has quickly gained popularity due to its performance and safety features.',
   'Swift is designed to be easy to read and write, with a clean and modern syntax. It is also highly performant, thanks to its use of the LLVM compiler and its support for both object-oriented and functional programming paradigms.',
-  'Swift is open-source and has a large and active community contributing to its development and ecosystem.'
+  'Swift is open-source and has a large and active community contributing to its development and ecosystem.',
 ]
 
 const toc = [
@@ -20,12 +20,13 @@ const toc = [
 const syntaxContent = [
   {
     title: 'Variables',
-    description: 'Variables in Swift can be defined using `var` for mutable variables and `let` for constants.',
+    description:
+      'Variables in Swift can be defined using `var` for mutable variables and `let` for constants.',
     content: `
       var x = 10
       let y = 20
       let z = "Hello, World!"
-    `
+    `,
   },
   {
     title: 'Functions',
@@ -38,11 +39,12 @@ const syntaxContent = [
       func greet() {
         print("Hello, World!")
       }
-    `
+    `,
   },
   {
     title: 'Classes',
-    description: 'Classes are defined using the `class` keyword. A class can contain methods and properties.',
+    description:
+      'Classes are defined using the `class` keyword. A class can contain methods and properties.',
     content: `
       class Person {
         var name: String
@@ -59,7 +61,7 @@ const syntaxContent = [
       }
 
       let john = Person(name: "John", age: 30)
-    `
+    `,
   },
   {
     title: 'Modules',
@@ -69,8 +71,8 @@ const syntaxContent = [
 
       let date = Date()
       print("Current date and time: \\(date)")
-    `
-  }
+    `,
+  },
 ]
 
 const languageElementsContent = [
@@ -87,7 +89,7 @@ const languageElementsContent = [
         print(j)
         j += 1
       }
-    `
+    `,
   },
   {
     title: 'Conditions',
@@ -99,7 +101,7 @@ const languageElementsContent = [
       } else {
         print("x is 10 or less")
       }
-    `
+    `,
   },
   {
     title: 'Exception Handling',
@@ -111,8 +113,8 @@ const languageElementsContent = [
       } catch {
         print("An error occurred: \\(error)")
       }
-    `
-  }
+    `,
+  },
 ]
 
 const sections = [
@@ -127,8 +129,8 @@ const sections = [
       'Building macOS applications (macOS Development).',
       'Creating watchOS applications (watchOS Development).',
       'Developing tvOS applications (tvOS Development).',
-      'Server-side programming with frameworks like Vapor and Kitura (Server-side Development).'
-    ]
+      'Server-side programming with frameworks like Vapor and Kitura (Server-side Development).',
+    ],
   },
   {
     id: 'history',
@@ -145,7 +147,7 @@ const sections = [
     id: 'syntax',
     title: 'Syntax',
     content: syntaxContent,
-  }
+  },
 ]
 
 const codeExamples = [
@@ -158,7 +160,7 @@ const codeExamples = [
       for i in 0...10 {  // Loop over a range from 0 to 10
         print(" \\(i)", terminator: "")
       }
-    `
+    `,
   },
   {
     tab: 'Asynchronous',
@@ -187,7 +189,7 @@ const codeExamples = [
       Task {
         await main()
       }
-    `
+    `,
   },
   {
     tab: 'Object-oriented',
@@ -245,7 +247,7 @@ const codeExamples = [
       }
 
       main()
-    `
+    `,
   },
   {
     tab: 'Functional',
@@ -281,7 +283,7 @@ const codeExamples = [
       }
 
       main()
-    `
+    `,
   },
   {
     tab: 'Ideal for tests',
@@ -314,25 +316,28 @@ const codeExamples = [
       }
 
       ExampleTests.defaultTestSuite.run()
-    `
-  }
+    `,
+  },
 ]
 
 const faqs = [
   {
     id: 1,
     question: 'What is Swift?',
-    answer: 'Swift is a powerful and intuitive programming language for iOS, macOS, watchOS, and tvOS app development.',
+    answer:
+      'Swift is a powerful and intuitive programming language for iOS, macOS, watchOS, and tvOS app development.',
   },
   {
     id: 2,
     question: 'Is Swift hard to learn?',
-    answer: 'Swift is well-suited for beginners as it has a simple syntax and is easy to learn and use.',
+    answer:
+      'Swift is well-suited for beginners as it has a simple syntax and is easy to learn and use.',
   },
   {
     id: 3,
     question: 'What are the main uses of Swift?',
-    answer: 'Swift is used in iOS, macOS, watchOS, and tvOS development, as well as server-side programming.',
+    answer:
+      'Swift is used in iOS, macOS, watchOS, and tvOS development, as well as server-side programming.',
   },
   {
     id: 4,
@@ -342,10 +347,10 @@ const faqs = [
   {
     id: 5,
     question: 'What is the difference between Swift and Objective-C?',
-    answer: 'Swift is a modern language designed to be safer and more expressive than Objective-C, with a cleaner syntax and better performance.',
+    answer:
+      'Swift is a modern language designed to be safer and more expressive than Objective-C, with a cleaner syntax and better performance.',
   },
 ]
-
 </script>
 
 <template>
@@ -376,9 +381,9 @@ const faqs = [
         <div v-else>
           <el-card v-for="(item, index) in syntaxContent" :key="index">
             <p class="cardTitle">{{ item.title }}</p>
-            <br>
+            <br />
             <p>{{ item.description }}</p>
-            <br>
+            <br />
             <pre><code v-html="item.content"></code></pre>
           </el-card>
         </div>
@@ -395,9 +400,9 @@ const faqs = [
         <h2>Language Elements</h2>
         <el-card v-for="(element, index) in languageElementsContent" :key="index">
           <p class="cardTitle">{{ element.title }}</p>
-          <br>
+          <br />
           <p>{{ element.description }}</p>
-          <br>
+          <br />
           <pre><code v-html="element.content"></code></pre>
         </el-card>
       </section>

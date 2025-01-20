@@ -5,7 +5,7 @@ const title = 'Java'
 const description = [
   'Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let programmers "write once, run anywhere" (WORA), meaning that compiled Java code can run on all platforms that support Java without the need to recompile.',
   'Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture. The syntax of Java is similar to C and C++, but has fewer low-level facilities than either of them.',
-  'The Java runtime provides dynamic capabilities (such as reflection and runtime code modification) that are typically not available in traditional compiled languages.'
+  'The Java runtime provides dynamic capabilities (such as reflection and runtime code modification) that are typically not available in traditional compiled languages.',
 ]
 
 const toc = [
@@ -20,17 +20,19 @@ const toc = [
 const syntaxContent = [
   {
     title: 'Variables',
-    description: 'Variables in Java can be defined using different data types such as int, float, double, and String.',
+    description:
+      'Variables in Java can be defined using different data types such as int, float, double, and String.',
     content: `
       int x = 10;
       float y = 20.5f;
       double z = 30.5;
       String name = "John";
-    `
+    `,
   },
   {
     title: 'Functions',
-    description: 'Functions (or methods) in Java are defined within classes using the `void` keyword for methods that do not return a value, or the return type for methods that return a value.',
+    description:
+      'Functions (or methods) in Java are defined within classes using the `void` keyword for methods that do not return a value, or the return type for methods that return a value.',
     content: `
       public int add(int a, int b) {
         return a + b;
@@ -39,11 +41,12 @@ const syntaxContent = [
       public void greet() {
         System.out.println("Hello, World!");
       }
-    `
+    `,
   },
   {
     title: 'Classes',
-    description: 'Classes are defined using the `class` keyword. A class can contain fields, methods, and constructors.',
+    description:
+      'Classes are defined using the `class` keyword. A class can contain fields, methods, and constructors.',
     content: `
       public class Person {
         private String name;
@@ -60,18 +63,19 @@ const syntaxContent = [
       }
 
       Person john = new Person("John", 30);
-    `
+    `,
   },
   {
     title: 'Modules',
-    description: 'Java supports modular programming with the `module` keyword introduced in Java 9.',
+    description:
+      'Java supports modular programming with the `module` keyword introduced in Java 9.',
     content: `
       module mymodule {
         requires java.base;
         exports com.example.mymodule;
       }
-    `
-  }
+    `,
+  },
 ]
 
 const sections = [
@@ -87,8 +91,8 @@ const sections = [
       'Creating Android mobile applications (Mobile Applications).',
       'Performing scientific research and simulations (Scientific Computing).',
       'Developing games and multimedia applications (Game Development).',
-      'Programming embedded systems and IoT devices (Embedded Systems).'
-    ]
+      'Programming embedded systems and IoT devices (Embedded Systems).',
+    ],
   },
   {
     id: 'history',
@@ -105,7 +109,7 @@ const sections = [
     id: 'syntax',
     title: 'Syntax',
     content: syntaxContent,
-  }
+  },
 ]
 
 const languageElementsContent = [
@@ -122,7 +126,7 @@ const languageElementsContent = [
         System.out.println(j);
         j++;
       }
-    `
+    `,
   },
   {
     title: 'Conditions',
@@ -134,7 +138,7 @@ const languageElementsContent = [
       } else {
         System.out.println("x is 10 or less");
       }
-    `
+    `,
   },
   {
     title: 'Exception Handling',
@@ -147,8 +151,8 @@ const languageElementsContent = [
       } finally {
         System.out.println("This will always execute");
       }
-    `
-  }
+    `,
+  },
 ]
 
 const codeExamples = [
@@ -165,7 +169,7 @@ const codeExamples = [
           }
         }
       }
-    `
+    `,
   },
   {
     tab: 'Asynchronous',
@@ -198,7 +202,7 @@ const codeExamples = [
           System.out.println(msg + " after " + (System.currentTimeMillis() - start) / 1000.0 + "s");
         }
       }
-    `
+    `,
   },
   {
     tab: 'Object-oriented',
@@ -252,7 +256,7 @@ const codeExamples = [
           sam.pay(10);  // A default implementation in an interface
         }
       }
-    `
+    `,
   },
   {
     tab: 'Functional',
@@ -313,7 +317,7 @@ const codeExamples = [
           return isRead;
         }
       }
-    `
+    `,
   },
   {
     tab: 'Ideal for tests',
@@ -346,38 +350,42 @@ const codeExamples = [
           return true;
         }
       }
-    `
-  }
+    `,
+  },
 ]
 
 const faqs = [
   {
     id: 1,
     question: 'What is Java?',
-    answer: 'Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.',
+    answer:
+      'Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.',
   },
   {
     id: 2,
     question: 'Is Java hard to learn?',
-    answer: 'Java is well-suited for beginners as it has a simple syntax and is easy to learn and use.',
+    answer:
+      'Java is well-suited for beginners as it has a simple syntax and is easy to learn and use.',
   },
   {
     id: 3,
     question: 'What are the main uses of Java?',
-    answer: 'Java is used in web development, enterprise applications, mobile applications, and more.',
+    answer:
+      'Java is used in web development, enterprise applications, mobile applications, and more.',
   },
   {
     id: 4,
     question: 'What are some popular Java libraries and frameworks?',
-    answer: 'Popular Java libraries and frameworks include Spring, Hibernate, Apache Struts, and JavaFX.',
+    answer:
+      'Popular Java libraries and frameworks include Spring, Hibernate, Apache Struts, and JavaFX.',
   },
   {
     id: 5,
     question: 'What is the difference between Java and JavaScript?',
-    answer: 'Although Java and JavaScript have similar names, they are distinct programming languages with different designs and purposes.',
+    answer:
+      'Although Java and JavaScript have similar names, they are distinct programming languages with different designs and purposes.',
   },
 ]
-
 </script>
 
 <template>
@@ -408,9 +416,9 @@ const faqs = [
         <div v-else>
           <el-card v-for="(item, index) in syntaxContent" :key="index">
             <p class="cardTitle">{{ item.title }}</p>
-            <br>
+            <br />
             <p>{{ item.description }}</p>
-            <br>
+            <br />
             <pre><code v-html="item.content"></code></pre>
           </el-card>
         </div>
@@ -427,9 +435,9 @@ const faqs = [
         <h2>Language Elements</h2>
         <el-card v-for="(element, index) in languageElementsContent" :key="index">
           <p class="cardTitle">{{ element.title }}</p>
-          <br>
+          <br />
           <p>{{ element.description }}</p>
-          <br>
+          <br />
           <pre><code v-html="element.content"></code></pre>
         </el-card>
       </section>

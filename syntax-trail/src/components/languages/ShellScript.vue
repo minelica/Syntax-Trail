@@ -5,7 +5,7 @@ const title = 'Shell Script'
 const description = [
   'Shell scripting is a powerful way to automate tasks and manage system configurations. It is commonly used in Unix-based operating systems like Linux and macOS.',
   'Shell scripts are written for the shell, or command line interpreter, of an operating system. The most common shell is Bash (Bourne Again SHell), but other shells like Zsh, Ksh, and Fish are also used.',
-  'Shell scripts can be used for a variety of tasks, including file manipulation, program execution, and text processing.'
+  'Shell scripts can be used for a variety of tasks, including file manipulation, program execution, and text processing.',
 ]
 
 const toc = [
@@ -25,11 +25,12 @@ const syntaxContent = [
       x=10
       y=20
       z="Hello, World!"
-    `
+    `,
   },
   {
     title: 'Functions',
-    description: 'Functions in shell scripts are defined using the `function` keyword or simply by writing the function name followed by parentheses.',
+    description:
+      'Functions in shell scripts are defined using the `function` keyword or simply by writing the function name followed by parentheses.',
     content: `
       function add() {
         local a=$1
@@ -40,7 +41,7 @@ const syntaxContent = [
       greet() {
         echo "Hello, World!"
       }
-    `
+    `,
   },
   {
     title: 'Conditionals',
@@ -51,7 +52,7 @@ const syntaxContent = [
       else
         echo "x is 10 or less"
       fi
-    `
+    `,
   },
   {
     title: 'Loops',
@@ -66,8 +67,8 @@ const syntaxContent = [
         echo $j
         j=$((j + 1))
       done
-    `
-  }
+    `,
+  },
 ]
 
 const languageElementsContent = [
@@ -86,11 +87,12 @@ const languageElementsContent = [
 
       # Delete a file
       rm myfile.txt
-    `
+    `,
   },
   {
     title: 'Text Processing',
-    description: 'Text processing in shell scripts can be done using tools like `grep`, `awk`, and `sed`.',
+    description:
+      'Text processing in shell scripts can be done using tools like `grep`, `awk`, and `sed`.',
     content: `
       # Search for a pattern in a file
       grep "pattern" myfile.txt
@@ -100,11 +102,12 @@ const languageElementsContent = [
 
       # Replace text in a file
       sed 's/old/new/g' myfile.txt
-    `
+    `,
   },
   {
     title: 'Process Management',
-    description: 'Process management in shell scripts includes starting, stopping, and monitoring processes.',
+    description:
+      'Process management in shell scripts includes starting, stopping, and monitoring processes.',
     content: `
       # Start a process
       myprocess &
@@ -114,8 +117,8 @@ const languageElementsContent = [
 
       # Kill a process
       kill $!
-    `
-  }
+    `,
+  },
 ]
 
 const sections = [
@@ -130,8 +133,8 @@ const sections = [
       'Automating deployment pipelines and managing infrastructure (DevOps).',
       'Automating data extraction, transformation, and loading (ETL) processes (Data Processing).',
       'Automating build and deployment processes (Application Development).',
-      'Automating security scans and monitoring (Security).'
-    ]
+      'Automating security scans and monitoring (Security).',
+    ],
   },
   {
     id: 'history',
@@ -163,7 +166,7 @@ const codeExamples = [
         echo -n " $i"
       done
       echo
-    `
+    `,
   },
   {
     tab: 'Asynchronous',
@@ -178,7 +181,7 @@ const codeExamples = [
       done
       wait
       echo "Liftoff!"
-    `
+    `,
   },
   {
     tab: 'File Operations',
@@ -195,7 +198,7 @@ const codeExamples = [
 
       # Delete a file
       rm myfile.txt
-    `
+    `,
   },
   {
     tab: 'Text Processing',
@@ -212,7 +215,7 @@ const codeExamples = [
 
       # Replace text in a file
       sed 's/Jane/Jenny/g' myfile.txt
-    `
+    `,
   },
   {
     tab: 'Process Management',
@@ -226,25 +229,28 @@ const codeExamples = [
 
       # Kill a process
       kill $!
-    `
-  }
+    `,
+  },
 ]
 
 const faqs = [
   {
     id: 1,
     question: 'What is shell scripting?',
-    answer: 'Shell scripting is a way to automate tasks and manage system configurations using a command line interpreter.',
+    answer:
+      'Shell scripting is a way to automate tasks and manage system configurations using a command line interpreter.',
   },
   {
     id: 2,
     question: 'Is shell scripting hard to learn?',
-    answer: 'Shell scripting is well-suited for beginners as it has a simple syntax and is easy to learn and use.',
+    answer:
+      'Shell scripting is well-suited for beginners as it has a simple syntax and is easy to learn and use.',
   },
   {
     id: 3,
     question: 'What are the main uses of shell scripting?',
-    answer: 'Shell scripting is used for system administration, DevOps, data processing, application development, and security.',
+    answer:
+      'Shell scripting is used for system administration, DevOps, data processing, application development, and security.',
   },
   {
     id: 4,
@@ -254,10 +260,10 @@ const faqs = [
   {
     id: 5,
     question: 'What is the difference between Bash and other shells?',
-    answer: 'Bash is the most common shell and is known for its simplicity and compatibility. Other shells like Zsh and Fish offer additional features and improvements.',
+    answer:
+      'Bash is the most common shell and is known for its simplicity and compatibility. Other shells like Zsh and Fish offer additional features and improvements.',
   },
 ]
-
 </script>
 
 <template>
@@ -265,7 +271,7 @@ const faqs = [
     <!-- Header -->
     <header class="hero">
       <h1>{{ title }}</h1>
-      <br>
+      <br />
       <div>
         <p v-for="(paragraph, index) in description" :key="index">{{ paragraph }}</p>
       </div>
@@ -289,14 +295,14 @@ const faqs = [
         <div v-else>
           <el-card v-for="(item, index) in syntaxContent" :key="index">
             <p class="cardTitle">{{ item.title }}</p>
-            <br>
+            <br />
             <p>{{ item.description }}</p>
-            <br>
+            <br />
             <pre><code v-html="item.content"></code></pre>
           </el-card>
         </div>
         <div v-if="section.bulletPoints">
-          <br>
+          <br />
           <h3>Examples of scripted behavior:</h3>
           <ul>
             <li v-for="(point, index) in section.bulletPoints" :key="index">{{ point }}</li>
@@ -309,9 +315,9 @@ const faqs = [
         <h2>Language Elements</h2>
         <el-card v-for="(element, index) in languageElementsContent" :key="index">
           <p class="cardTitle">{{ element.title }}</p>
-          <br>
+          <br />
           <p>{{ element.description }}</p>
-          <br>
+          <br />
           <pre><code v-html="element.content"></code></pre>
         </el-card>
       </section>
