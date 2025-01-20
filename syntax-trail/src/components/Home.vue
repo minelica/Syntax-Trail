@@ -130,5 +130,7 @@ const languages = ref([
     0 0 55px #1a202c,
     0 0 75px #1a202c,
     2px 2px 2px rgba(206, 89, 55, 0);
+    text-align: center;
+    font-size: 18px;
 }
 </style>
