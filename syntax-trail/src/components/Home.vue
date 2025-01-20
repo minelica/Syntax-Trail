@@ -8,7 +8,6 @@
 
     <!-- Introduction Section -->
     <section class="introduction">
-      <!-- <h2>Welcome to Syntax Trail</h2> -->
       <p class="home-intro">
         Syntax Trail is your ultimate guide to learning and mastering various programming languages.
         Whether you are a beginner looking to start your coding journey or an experienced developer

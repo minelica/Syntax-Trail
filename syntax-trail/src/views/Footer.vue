@@ -4,7 +4,7 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-section copyright">
-        <p>© 2024 Syntax Trail. All rights reserved.</p>
+        <p>© 2025 Syntax Trail. All rights reserved.</p>
       </div>
       <div class="footer-section quick-links">
         <ul>
