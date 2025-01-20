@@ -30,6 +30,8 @@
   color: #e2e8f0;
   padding: 2rem;
   text-align: center;
+  padding: 1rem 0;
+  border-radius: 8px;
 }
 
 .footer-content {
@@ -57,7 +59,7 @@
 }
 
 .quick-links a {
-  color: #e2e8f0;
+  color: #63b3ed;
   text-decoration: none;
 }
 

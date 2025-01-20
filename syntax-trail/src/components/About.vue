@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const value = ref()
+</script>
 
 <template>
   <header class="hero">
@@ -45,6 +49,10 @@
       Feedback, suggestions, and ideas for improvement are highly appreciated to make Syntax Trail even more useful and
       effective.</p>
   </header>
+
+  <div class="rate">
+    <el-rate v-model="value" allow-half />
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -56,5 +64,12 @@
 .highlight {
   font-weight: bold;
   color: #63b3ed;
+}
+
+.rate {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 </style>

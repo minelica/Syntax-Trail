@@ -132,4 +132,10 @@ const languages = ref([
     text-align: center;
     font-size: 18px;
 }
+
+h3 {
+  font-family: 'Courier New', Courier, monospace;
+  color: #1a202c;
+  margin-top: 10px;
+}
 </style>

@@ -97,13 +97,15 @@ const handleSelect = (key: string, keyPath: string[]) => {
 }
 
 .el-menu--horizontal > .el-menu-item.is-active {
-  border-bottom: 2px solid #2d3748 !important;
+  border-bottom: 2px solid #cbd5e0 !important;
   color: var(--el-menu-active-color) !important; /* edit */
+  border-radius: 8px !important;
 }
 
 .el-menu--horizontal > .el-menu-item a,
 .el-menu--horizontal > .el-menu-item a:hover {
   font-weight: bold;
+  border-radius: 8px !important;
 }
 
 a:-webkit-any-link {
@@ -115,7 +117,7 @@ a:-webkit-any-link {
 }
 
 .el-menu--horizontal > .el-sub-menu.is-active .el-sub-menu__title {
-  border-bottom: 2px solid #2d3748 !important;
+  border-bottom: 2px solid #2d4834 !important;
 }
 
 .el-sub-menu:hover {
