@@ -9,15 +9,10 @@ const handleSelect = (key: string, keyPath: string[]) => {
 </script>
 
 <template>
-  <el-menu
-    :default-active="activeIndex"
-    class="el-menu-demo"
-    mode="horizontal"
-    :ellipsis="false"
-    @select="handleSelect"
-  >
+  <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :ellipsis="false"
+    @select="handleSelect">
     <el-menu-item index="0">
-      <img src="/src/assets/logo.jpg" style="width: 50px; border-radius: 20px" alt="Logo" />
+      <router-link to="/"><img src="/src/assets/logo.jpg" style="width: 50px; border-radius: 20px" alt="Logo" /></router-link>
       <p class="menu_title_st">Syntax Trail</p>
     </el-menu-item>
     <el-menu-item index="1">
@@ -84,7 +79,7 @@ const handleSelect = (key: string, keyPath: string[]) => {
 </template>
 
 <style>
-.el-menu--horizontal > .el-menu-item:nth-child(1) {
+.el-menu--horizontal>.el-menu-item:nth-child(1) {
   margin-right: auto;
 }
 
@@ -96,14 +91,15 @@ const handleSelect = (key: string, keyPath: string[]) => {
   border-bottom: none !important;
 }
 
-.el-menu--horizontal > .el-menu-item.is-active {
+.el-menu--horizontal>.el-menu-item.is-active {
   border-bottom: 2px solid #cbd5e0 !important;
-  color: var(--el-menu-active-color) !important; /* edit */
+  color: var(--el-menu-active-color) !important;
+  /* edit */
   border-radius: 8px !important;
 }
 
-.el-menu--horizontal > .el-menu-item a,
-.el-menu--horizontal > .el-menu-item a:hover {
+.el-menu--horizontal>.el-menu-item a,
+.el-menu--horizontal>.el-menu-item a:hover {
   font-weight: bold;
   border-radius: 8px !important;
 }
@@ -116,7 +112,7 @@ a:-webkit-any-link {
   font-weight: bold;
 }
 
-.el-menu--horizontal > .el-sub-menu.is-active .el-sub-menu__title {
+.el-menu--horizontal>.el-sub-menu.is-active .el-sub-menu__title {
   border-bottom: 2px solid #2d4834 !important;
 }
 

@@ -1,32 +1,32 @@
 <template>
-  <div class="home">
-    <!-- Hero Section -->
-    <header class="hero">
-      <h1>Syntax Trail</h1>
-      <p>Your Companion for Exploring Programming Languages</p>
-    </header>
+  <div class="language-page">
+      <!-- Hero Section -->
+      <header class="hero">
+        <h1>Syntax Trail</h1>
+        <p>Your Companion for Exploring Programming Languages</p>
+      </header>
 
-    <!-- Introduction Section -->
-    <section class="introduction">
-      <p class="home-intro">
-        Syntax Trail is your ultimate guide to learning and mastering various programming languages.
-        Whether you are a beginner looking to start your coding journey or an experienced developer
-        aiming to expand your skill set, we have got you covered. Explore our comprehensive
-        tutorials, examples, and resources to enhance your programming knowledge and stay ahead in
-        the tech world.
-      </p>
-    </section>
+      <!-- Introduction Section -->
+      <section class="introduction">
+        <p class="home-intro">
+          Syntax Trail is your ultimate guide to learning and mastering various programming languages.
+          Whether you are a beginner looking to start your coding journey or an experienced developer
+          aiming to expand your skill set, we have got you covered. Explore our comprehensive
+          tutorials, examples, and resources to enhance your programming knowledge and stay ahead in
+          the tech world.
+        </p>
+      </section>
 
-    <!-- Grid Section -->
-    <section class="languages-grid">
-      <h2>Explore Programming Languages</h2>
-      <div class="grid">
-        <el-card v-for="language in languages" :key="language.name" class="language-card">
-          <img :src="language.logo" :alt="language.name" class="logo" />
-          <h3>{{ language.name }}</h3>
-        </el-card>
-      </div>
-    </section>
+      <!-- Grid Section -->
+      <section class="languages-grid">
+        <h2>Explore Programming Languages</h2>
+        <div class="grid">
+          <el-card v-for="language in languages" :key="language.name" class="language-card">
+            <img :src="language.logo" :alt="language.name" class="logo" />
+            <h3>{{ language.name }}</h3>
+          </el-card>
+        </div>
+      </section>
   </div>
 </template>
 
@@ -56,12 +56,6 @@ const languages = ref([
 </script>
 
 <style scoped>
-.home {
-  color: #ffffff;
-  background-color: #2d3748;
-  padding: 2rem;
-  min-height: 100vh;
-}
 
 .hero {
   text-align: center;
@@ -129,8 +123,8 @@ const languages = ref([
     0 0 55px #1a202c,
     0 0 75px #1a202c,
     2px 2px 2px rgba(206, 89, 55, 0);
-    text-align: center;
-    font-size: 18px;
+  text-align: center;
+  font-size: 18px;
 }
 
 h3 {
