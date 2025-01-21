@@ -14,7 +14,7 @@
         </ul>
       </div>
       <div class="footer-section contact">
-        <p>Contact us at: <a href="mailto:support@syntaxtrail.com">support@syntaxtrail.com</a></p>
+        <p>Contact us at: <a href="mailto:minelam.dev@gmail.com">minelam.dev@gmail.com</a></p>
       </div>
       <div class="footer-section social-media">
         <a href="https://github.com/minelica" target="_blank">GitHub</a>
