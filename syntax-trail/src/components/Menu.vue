@@ -12,7 +12,7 @@ const handleSelect = (key: string, keyPath: string[]) => {
   <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :ellipsis="false"
     @select="handleSelect">
     <el-menu-item index="0">
-      <router-link to="/"><img src="/src/assets/logo.jpg" style="width: 50px; border-radius: 20px" alt="Logo" /></router-link>
+      <router-link to="/"><img src="/src/assets/logo.jpg" style="width: 55px; border-radius: 20px" alt="Logo" /></router-link>
       <p class="menu_title_st">Syntax Trail</p>
     </el-menu-item>
     <el-menu-item index="1">

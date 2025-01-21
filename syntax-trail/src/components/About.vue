@@ -1,8 +1,4 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-const value = ref()
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="language-page">
@@ -66,9 +62,12 @@ const value = ref()
 
     <br>
 
-    <div class="rate">
-      <el-rate v-model="value" allow-half />
-    </div>
+    <header class="hero">
+      <p><img src="/src/assets/logoST.jpg" style="width: 400px; border-radius: 20px; margin-top: 10px" alt="Logo" /></p>
+    </header>
+
+    <br>
+
   </div>
 </template>
 
