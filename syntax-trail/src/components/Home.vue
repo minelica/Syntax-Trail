@@ -1,63 +1,70 @@
 <template>
   <div class="language-page">
-      <!-- Hero Section -->
-      <header class="hero">
-        <h1>Syntax Trail</h1>
-        <p>Your Companion for Exploring Programming Languages</p>
+    <!-- Hero Section -->
+    <header class="hero">
+      <h1>Syntax Trail</h1>
+      <p>Your Companion for Exploring Programming Languages</p>
       <!--  <p><img src="/src/assets/logoST.jpg" style="width: 400px; border-radius: 20px; margin-top: 20px" alt="Logo"/></p> -->
-      </header>
+    </header>
 
-      <!-- Introduction Section -->
-      <section class="introduction">
-        <p class="home-intro">
-          Syntax Trail is your ultimate guide to learning and mastering various programming languages.
-          Whether you are a beginner looking to start your coding journey or an experienced developer
-          aiming to expand your skill set, we have got you covered. Explore our comprehensive
-          tutorials, examples, and resources to enhance your programming knowledge and stay ahead in
-          the tech world.
-        </p>
-      </section>
+    <!-- Introduction Section -->
+    <section class="introduction">
+      <p class="home-intro">
+        Syntax Trail is your ultimate guide to learning and mastering various programming languages.
+        Whether you are a beginner looking to start your coding journey or an experienced developer
+        aiming to expand your skill set, we have got you covered. Explore our comprehensive
+        tutorials, examples, and resources to enhance your programming knowledge and stay ahead in
+        the tech world.
+      </p>
+    </section>
 
-      <!-- Grid Section -->
-      <section class="languages-grid">
-        <h2>Explore Programming Languages</h2>
-        <div class="grid">
-          <el-card v-for="language in languages" :key="language.name" class="language-card">
-            <img :src="language.logo" :alt="language.name" class="logo" />
-            <h3>{{ language.name }}</h3>
-          </el-card>
-        </div>
-      </section>
+    <!-- Grid Section -->
+    <section class="languages-grid">
+      <h2>Explore Programming Languages</h2>
+      <div class="grid">
+        <el-card v-for="language in languages" :key="language.name" class="language-card"
+          @click="navigateToLanguage(language.path)">
+          <img :src="language.logo" :alt="language.name" class="logo" />
+          <h3>{{ language.name }}</h3>
+        </el-card>
+      </div>
+    </section>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-// Define the list of programming languages
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
 const languages = ref([
-  { name: 'JavaScript', logo: '/src/assets/logos/javascript.png' },
-  { name: 'Python', logo: '/src/assets/logos/python.png' },
-  { name: 'Java', logo: '/src/assets/logos/java.png' },
-  { name: 'C++', logo: '/src/assets/logos/cplusplus.png' },
-  { name: 'C#', logo: '/src/assets/logos/csharp.png' },
-  { name: 'Ruby', logo: '/src/assets/logos/ruby.png' },
-  { name: 'PHP', logo: '/src/assets/logos/php.png' },
-  { name: 'Swift', logo: '/src/assets/logos/swift.png' },
-  { name: 'Go', logo: '/src/assets/logos/go.png' },
-  { name: 'Rust', logo: '/src/assets/logos/rust.png' },
-  { name: 'SQL', logo: '/src/assets/logos/sql.png' },
-  { name: 'Kotlin', logo: '/src/assets/logos/kotlin.png' },
-  { name: 'TypeScript', logo: '/src/assets/logos/typescript.png' },
-  { name: 'R', logo: '/src/assets/logos/r.png' },
-  { name: 'ShellScript', logo: '/src/assets/logos/shell.png' },
-  { name: 'MATLAB', logo: '/src/assets/logos/matlab.png' },
-  { name: 'Dart', logo: '/src/assets/logos/dart.png' },
+  { name: 'JavaScript', logo: '/src/assets/logos/javascript.png', path: '/javascript' },
+  { name: 'Python', logo: '/src/assets/logos/python.png', path: '/python' },
+  { name: 'Java', logo: '/src/assets/logos/java.png', path: '/java' },
+  { name: 'C++', logo: '/src/assets/logos/cplusplus.png', path: '/cplusplus' },
+  { name: 'C#', logo: '/src/assets/logos/csharp.png', path: '/csharp' },
+  { name: 'Ruby', logo: '/src/assets/logos/ruby.png', path: '/ruby' },
+  { name: 'PHP', logo: '/src/assets/logos/php.png', path: '/php' },
+  { name: 'Swift', logo: '/src/assets/logos/swift.png', path: '/swift' },
+  { name: 'Go', logo: '/src/assets/logos/go.png', path: '/go' },
+  { name: 'Rust', logo: '/src/assets/logos/rust.png', path: '/rust' },
+  { name: 'SQL', logo: '/src/assets/logos/sql.png', path: '/sql' },
+  { name: 'Kotlin', logo: '/src/assets/logos/kotlin.png', path: '/kotlin' },
+  { name: 'TypeScript', logo: '/src/assets/logos/typescript.png', path: '/typescript' },
+  { name: 'R', logo: '/src/assets/logos/r.png', path: '/r' },
+  { name: 'ShellScript', logo: '/src/assets/logos/shell.png', path: '/shellscript' },
+  { name: 'MATLAB', logo: '/src/assets/logos/matlab.png', path: '/matlab' },
+  { name: 'Dart', logo: '/src/assets/logos/dart.png', path: '/dart' },
 ])
+
+const navigateToLanguage = (path: string) => {
+  router.push(path)
+}
 </script>
 
 <style scoped>
-
 .hero {
   text-align: center;
   padding: 2rem 0;
