@@ -140,7 +140,7 @@ a:-webkit-any-link {
   font-size: 45px;
   font-family: 'Courier New', Courier, monospace;
   margin-left: 30px;
-  text-shadow:
+  /*text-shadow:
     0 0 5px #fff,
     0 0 10px #fff,
     0 0 15px #fff,
@@ -149,11 +149,12 @@ a:-webkit-any-link {
     0 0 40px #1a202c,
     0 0 55px #1a202c,
     0 0 75px #1a202c,
-    2px 2px 2px rgba(206, 89, 55, 0);
+    2px 2px 2px rgba(206, 89, 55, 0);*/
+  color: #fafafa;
 }
 
 .menu_title_st:hover {
-  color: #242c3a !important;
+  color: #fafafa !important;
 }
 li.el-menu-item {
   border-radius: 8px !important;
