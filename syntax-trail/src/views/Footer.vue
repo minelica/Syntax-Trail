@@ -59,7 +59,7 @@
 
 .quick-links a {
   color: #e2e8f0;
-  text-decoration: none;
+  text-decoration: underline !important;
 }
 
 .quick-links a:hover {
@@ -75,9 +75,11 @@
 .social-media a {
   margin: 0.5rem 0;
   color: #e2e8f0;
+  text-decoration: underline !important;
 }
 
 .contact a {
   color: #e2e8f0;
+  text-decoration: underline !important;
 }
 </style>s
