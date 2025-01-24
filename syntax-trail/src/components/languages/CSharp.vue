@@ -384,6 +384,7 @@ const faqs = [
     <!-- Table of Contents -->
     <nav class="table-of-contents">
       <ul>
+        <h3 style="padding-left: 10px; padding-bottom: 20px">Table of contents</h3>
         <li v-for="item in toc" :key="item.id">
           <a :href="item.link">{{ item.title }}</a>
         </li>

@@ -84,7 +84,7 @@ const handleSelect = (key: string, keyPath: string[]) => {
 }
 
 .el-menu {
-  background-color: #cbd5e0 !important;
+  background-color: #1a202c !important;
 }
 
 .el-menu--horizontal.el-menu {
@@ -93,8 +93,6 @@ const handleSelect = (key: string, keyPath: string[]) => {
 
 .el-menu--horizontal>.el-menu-item.is-active {
   border-bottom: 2px solid #cbd5e0 !important;
-  color: var(--el-menu-active-color) !important;
-  /* edit */
   border-radius: 8px !important;
 }
 
@@ -110,34 +108,70 @@ a:-webkit-any-link {
 
 .el-sub-menu__title {
   font-weight: bold;
+  color: #cbd5e0 !important;
+  background-color: transparent !important;
+  border-radius: 8px !important;
 }
 
 .el-menu--horizontal>.el-sub-menu.is-active .el-sub-menu__title {
-  border-bottom: 2px solid #2d4834 !important;
+  border-bottom: 2px solid #cbd5e0 !important;
 }
 
 .el-sub-menu:hover {
-  background-color: #cbd5e0 !important;
+  background-color: #242c3a !important;
+  border-radius: 8px !important;
 }
 
 .el-sub-menu.is-opened {
-  background-color: #cbd5e0 !important;
+  background-color: #242c3a !important;
+}
+
+.el-menu-item:hover {
+  background-color: #242c3a !important;
+  border-radius: 8px !important;
+}
+
+.el-menu-item.is-opened {
+  background-color: #242c3a !important;
 }
 
 .menu_title_st {
   font-weight: bolder;
-  font-size: 30px;
+  font-size: 45px;
   font-family: 'Courier New', Courier, monospace;
   margin-left: 30px;
   text-shadow:
     0 0 5px #fff,
     0 0 10px #fff,
     0 0 15px #fff,
-    0 0 20px #49ff18,
-    0 0 30px #49ff18,
-    0 0 40px #49ff18,
-    0 0 55px #49ff18,
-    0 0 75px #49ff18,
+    0 0 20px #1a202c,
+    0 0 30px #1a202c,
+    0 0 40px #1a202c,
+    0 0 55px #1a202c,
+    0 0 75px #1a202c,
     2px 2px 2px rgba(206, 89, 55, 0);
 }
+
+.menu_title_st:hover {
+  color: #242c3a !important;
+}
+li.el-menu-item {
+  border-radius: 8px !important;
+  background: transparent !important;
+}
+
+.el-menu-item a {
+  color: #cbd5e0 !important;
+  font-weight: bold;
+  background-color: transparent !important;
+}
+
+.el-id-8430-0 {
+  color: #cbd5e0 !important;
+}
+
+.li.el-sub-menu.is-active {
+ background-color: transparent !important;
+}
+
 </style>

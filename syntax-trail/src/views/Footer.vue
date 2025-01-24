@@ -31,7 +31,6 @@
   padding: 2rem;
   text-align: center;
   padding: 1rem 0;
-  border-radius: 8px;
 }
 
 .footer-content {
@@ -59,7 +58,7 @@
 }
 
 .quick-links a {
-  color: #63b3ed;
+  color: #e2e8f0;
   text-decoration: none;
 }
 
@@ -75,10 +74,10 @@
 
 .social-media a {
   margin: 0.5rem 0;
-  color: #63b3ed;
+  color: #e2e8f0;
 }
 
 .contact a {
-  color: #63b3ed;
+  color: #e2e8f0;
 }
 </style>s

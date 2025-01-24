@@ -63,7 +63,7 @@
     <br>
 
     <header class="hero">
-      <p><img src="/src/assets/logoST.jpg" style="width: 400px; border-radius: 20px; margin-top: 10px" alt="Logo" /></p>
+      <p style="text-align: center"><img src="/src/assets/logoST.jpg" style="width: 400px; border-radius: 20px; margin-top: 10px" alt="Logo" /></p>
     </header>
 
     <br>

@@ -3,7 +3,7 @@
     <!-- Hero Section -->
     <header class="hero">
       <h1>Syntax Trail</h1>
-      <p>Your Companion for Exploring Programming Languages</p>
+      <p style="text-align: center;">Your Companion for Exploring Programming Languages</p>
       <!--  <p><img src="/src/assets/logoST.jpg" style="width: 400px; border-radius: 20px; margin-top: 20px" alt="Logo"/></p> -->
     </header>
 
