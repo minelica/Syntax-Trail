@@ -106,6 +106,7 @@ const navigateToLanguage = (path: string) => {
   transition: transform 0.2s;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  cursor: pointer;
 }
 
 .language-card:hover {
