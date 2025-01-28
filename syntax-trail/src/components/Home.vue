@@ -22,14 +22,10 @@
     <section class="languages-grid">
       <h2>Explore Programming Languages</h2>
       <div class="grid">
-        <el-card
-          v-for="language in languages"
-          :key="language.name"
-          class="language-card"
-          @click="navigateToLanguage(language.path)"
-        >
+        <el-card v-for="language in languages" :key="language.name" class="language-card"
+          @click="navigateToLanguage(language.path)">
           <img :src="language.logo" :alt="language.name" class="logo" />
-          <h3>{{ language.name }}</h3>
+          <h3 class="language-name">{{ language.name }}</h3>
         </el-card>
       </div>
     </section>
@@ -106,8 +102,10 @@ const navigateToLanguage = (path: string) => {
   background-color: #1a202c;
   color: #e2e8f0;
   border-radius: 8px;
-  padding: 1rem;
+  /*padding: 1rem;*/
   transition: transform 0.2s;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .language-card:hover {
@@ -117,6 +115,10 @@ const navigateToLanguage = (path: string) => {
 .logo {
   width: 100px;
   height: 100px;
+}
+
+.language-name {
+  text-align: center !important;
 }
 
 .home-intro {

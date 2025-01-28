@@ -9,17 +9,11 @@ const handleSelect = (key: string, keyPath: string[]) => {
 </script>
 
 <template>
-  <el-menu
-    :default-active="activeIndex"
-    class="el-menu-demo"
-    mode="horizontal"
-    :ellipsis="false"
-    @select="handleSelect"
-  >
+  <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :ellipsis="false"
+    @select="handleSelect">
     <el-menu-item index="0">
-      <router-link to="/"
-        ><img src="/src/assets/logo.jpg" style="width: 55px; border-radius: 20px" alt="Logo"
-      /></router-link>
+      <router-link to="/"><img src="/src/assets/logo.jpg" style="width: 55px; border-radius: 20px"
+          alt="Logo" /></router-link>
       <p class="menu_title_st">Syntax Trail</p>
     </el-menu-item>
     <el-menu-item index="1">
@@ -86,7 +80,7 @@ const handleSelect = (key: string, keyPath: string[]) => {
 </template>
 
 <style>
-.el-menu--horizontal > .el-menu-item:nth-child(1) {
+.el-menu--horizontal>.el-menu-item:nth-child(1) {
   margin-right: auto;
 }
 
@@ -98,14 +92,15 @@ const handleSelect = (key: string, keyPath: string[]) => {
   border-bottom: none !important;
 }
 
-.el-menu--horizontal > .el-menu-item.is-active {
+.el-menu--horizontal>.el-menu-item.is-active {
   border-bottom: 2px solid #cbd5e0 !important;
   border-radius: 8px !important;
 }
 
-.el-menu--horizontal > .el-menu-item a,
-.el-menu--horizontal > .el-menu-item a:hover {
+.el-menu--horizontal>.el-menu-item a,
+.el-menu--horizontal>.el-menu-item a:hover {
   font-weight: bold;
+  font-size: 20px;
   border-radius: 8px !important;
 }
 
@@ -114,13 +109,14 @@ a:-webkit-any-link {
 }
 
 .el-sub-menu__title {
+  font-size: 20px !important;
   font-weight: bold;
   color: #cbd5e0 !important;
   background-color: transparent !important;
   border-radius: 8px !important;
 }
 
-.el-menu--horizontal > .el-sub-menu.is-active .el-sub-menu__title {
+.el-menu--horizontal>.el-sub-menu.is-active .el-sub-menu__title {
   border-bottom: 2px solid #cbd5e0 !important;
 }
 
@@ -163,6 +159,7 @@ a:-webkit-any-link {
 .menu_title_st:hover {
   color: #fafafa !important;
 }
+
 li.el-menu-item {
   border-radius: 8px !important;
   background: transparent !important;
