@@ -68,9 +68,9 @@ p {
 }
 
 .table-of-contents a:hover {
-  color: #cbd5e0; 
+  color: #cbd5e0;
   text-decoration: underline !important;
-  text-decoration-color: #cbd5e0 !important; 
+  text-decoration-color: #cbd5e0 !important;
   text-decoration-thickness: 2px !important;
   border-radius: 8px;
 }

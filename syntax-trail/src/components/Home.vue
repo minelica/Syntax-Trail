@@ -3,7 +3,7 @@
     <!-- Hero Section -->
     <header class="hero">
       <h1>Syntax Trail</h1>
-      <p style="text-align: center;">Your Companion for Exploring Programming Languages</p>
+      <p style="text-align: center">Your Companion for Exploring Programming Languages</p>
       <!--  <p><img src="/src/assets/logoST.jpg" style="width: 400px; border-radius: 20px; margin-top: 20px" alt="Logo"/></p> -->
     </header>
 
@@ -22,8 +22,12 @@
     <section class="languages-grid">
       <h2>Explore Programming Languages</h2>
       <div class="grid">
-        <el-card v-for="language in languages" :key="language.name" class="language-card"
-          @click="navigateToLanguage(language.path)">
+        <el-card
+          v-for="language in languages"
+          :key="language.name"
+          class="language-card"
+          @click="navigateToLanguage(language.path)"
+        >
           <img :src="language.logo" :alt="language.name" class="logo" />
           <h3>{{ language.name }}</h3>
         </el-card>
@@ -121,7 +125,7 @@ const navigateToLanguage = (path: string) => {
   padding-left: 50px;
   padding-right: 50px;
   font-family: 'Courier New', Courier, monospace;
-  text-shadow:
+  /*text-shadow:
     0 0 5px #fff,
     0 0 10px #fff,
     0 0 15px #fff,
@@ -130,7 +134,7 @@ const navigateToLanguage = (path: string) => {
     0 0 40px #1a202c,
     0 0 55px #1a202c,
     0 0 75px #1a202c,
-    2px 2px 2px rgba(206, 89, 55, 0);
+    2px 2px 2px rgba(206, 89, 55, 0);*/
   text-align: center;
   font-size: 18px;
 }
