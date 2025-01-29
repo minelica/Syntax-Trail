@@ -12,74 +12,82 @@ const handleSelect = (key: string, keyPath: string[]) => {
   <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :ellipsis="false"
     @select="handleSelect">
     <el-menu-item index="0">
-      <router-link to="/"><img src="/src/assets/logo.jpg" style="width: 55px; border-radius: 20px"
-          alt="Logo" /></router-link>
-      <p class="menu_title_st">Syntax Trail</p>
+      <router-link to="/" class="full-link">
+        <img src="/src/assets/logo.jpg" style="width: 55px; border-radius: 20px" alt="Logo" />
+        <p class="menu_title_st">Syntax Trail</p>
+      </router-link>
     </el-menu-item>
     <el-menu-item index="1">
-      <router-link to="/">Home</router-link>
+      <router-link to="/" class="full-link">Home</router-link>
     </el-menu-item>
     <el-sub-menu index="2">
       <template #title>Languages</template>
       <el-menu-item index="2-1">
-        <router-link to="/javascript">JavaScript</router-link>
+        <router-link to="/javascript" class="full-link">JavaScript</router-link>
       </el-menu-item>
       <el-menu-item index="2-2">
-        <router-link to="/python">Python</router-link>
+        <router-link to="/python" class="full-link">Python</router-link>
       </el-menu-item>
       <el-menu-item index="2-3">
-        <router-link to="/java">Java</router-link>
+        <router-link to="/java" class="full-link">Java</router-link>
       </el-menu-item>
       <el-menu-item index="2-4">
-        <router-link to="/cplusplus">C++</router-link>
+        <router-link to="/cplusplus" class="full-link">C++</router-link>
       </el-menu-item>
       <el-menu-item index="2-5">
-        <router-link to="/csharp">C#</router-link>
+        <router-link to="/csharp" class="full-link">C#</router-link>
       </el-menu-item>
       <el-menu-item index="2-6">
-        <router-link to="/ruby">Ruby</router-link>
+        <router-link to="/ruby" class="full-link">Ruby</router-link>
       </el-menu-item>
       <el-menu-item index="2-7">
-        <router-link to="/php">PHP</router-link>
+        <router-link to="/php" class="full-link">PHP</router-link>
       </el-menu-item>
       <el-menu-item index="2-8">
-        <router-link to="/swift">Swift</router-link>
+        <router-link to="/swift" class="full-link">Swift</router-link>
       </el-menu-item>
       <el-menu-item index="2-9">
-        <router-link to="/go">Go</router-link>
+        <router-link to="/go" class="full-link">Go</router-link>
       </el-menu-item>
       <el-menu-item index="2-10">
-        <router-link to="/rust">Rust</router-link>
+        <router-link to="/rust" class="full-link">Rust</router-link>
       </el-menu-item>
       <el-menu-item index="2-11">
-        <router-link to="/sql">SQL</router-link>
+        <router-link to="/sql" class="full-link">SQL</router-link>
       </el-menu-item>
       <el-menu-item index="2-12">
-        <router-link to="/kotlin">Kotlin</router-link>
+        <router-link to="/kotlin" class="full-link">Kotlin</router-link>
       </el-menu-item>
       <el-menu-item index="2-13">
-        <router-link to="/typescript">TypeScript</router-link>
+        <router-link to="/typescript" class="full-link">TypeScript</router-link>
       </el-menu-item>
       <el-menu-item index="2-14">
-        <router-link to="/r">R</router-link>
+        <router-link to="/r" class="full-link">R</router-link>
       </el-menu-item>
       <el-menu-item index="2-15">
-        <router-link to="/shellscript">ShellScript</router-link>
+        <router-link to="/shellscript" class="full-link">ShellScript</router-link>
       </el-menu-item>
       <el-menu-item index="2-16">
-        <router-link to="/matlab">Matlab</router-link>
+        <router-link to="/matlab" class="full-link">Matlab</router-link>
       </el-menu-item>
       <el-menu-item index="2-17">
-        <router-link to="/dart">Dart</router-link>
+        <router-link to="/dart" class="full-link">Dart</router-link>
       </el-menu-item>
     </el-sub-menu>
     <el-menu-item index="3">
-      <router-link to="/about">About</router-link>
+      <router-link to="/about" class="full-link">About</router-link>
     </el-menu-item>
   </el-menu>
 </template>
 
 <style>
+.full-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
 .el-menu--horizontal>.el-menu-item:nth-child(1) {
   margin-right: auto;
 }
