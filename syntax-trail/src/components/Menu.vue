@@ -82,7 +82,8 @@ const handleSelect = (key: string, keyPath: string[]) => {
 
 <style>
 .full-link {
-  display: block;
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 100%;
   text-decoration: none;
