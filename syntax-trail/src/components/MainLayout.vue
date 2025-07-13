@@ -5,7 +5,7 @@ import '@/assets/main.css'
 </script>
 
 <template>
-  <div id="layout">
+  <div id="layout" class="md:p-8 lg:p-12">
     <header>
       <Menu />
     </header>

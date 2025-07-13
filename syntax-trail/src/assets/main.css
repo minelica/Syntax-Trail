@@ -1,12 +1,17 @@
+@import 'tailwindcss';
 @import './base.css';
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
 
 #app {
   max-width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0;
+  padding: 0rem;
   font-weight: normal;
   background-color: #242c3a; /* darker: #242c3a; lighter: #2d3748; */
   color: #e2e8f0;
+  font-family: 'Roboto', 'Helvetica', 'Arial', 'sans-serif' !important;
 }
 
 @media (hover: hover) {
@@ -102,15 +107,15 @@ h1 {
 }
 
 h2 {
-  font-weight: bold;
-  color: #cbd5e0;
-  background-color: #1a202c;
-  padding-left: 15px;
-  border-radius: 8px;
-  margin-top: 50px;
-  margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  font-weight: bold !important;
+  color: #cbd5e0 !important;
+  background-color: #1a202c !important;
+  padding-left: 15px !important;
+  border-radius: 8px !important;
+  margin-top: 50px !important;
+  margin-bottom: 20px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 }
 
 h3 {
@@ -215,11 +220,11 @@ body {
 header {
   background-color: #1a202c !important;
   /*color: #ffffff;*/
-  padding: 1rem !important;
+  /* padding: 1rem !important; */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
   border-radius: 8px;
   /*position: fixed;*/
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .el-menu {
@@ -253,4 +258,47 @@ nav a.router-link-active {
 /* --- el-backtop --- */
 .el-backtop {
   --el-backtop-text-color: #1a202c !important;
+}
+
+/* --- tailwindcss --- */
+.ml-4.text-3xl.font-extrabold {
+  margin-left: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900 !important;
+  color: #cbd5e0 !important;
+  font-size: 40px;
+}
+
+.block.md\:inline-block.px-4.py-2.rounded.hover\:bg-\[\#242c3a\]:hover {
+  background-color: #242c3a;
+  border-radius: 8px;
+}
+
+.px-4 {
+  font-weight: bold !important;
+  color: #e2e8f0 !important;
+}
+
+.block.md\:inline-block.px-4.py-2.rounded.hover\:bg-\[\#242c3a\] {
+  font-weight: bold !important;
+  color: #cbd5e0 !important;
+  padding-left: 20px;
+  border-radius: 8px;
+  font-size: 20px !important;
+}
+
+.block.px-4.py-2 {
+  font-weight: bold !important;
+  color: #e2e8f0 !important;
+  padding-left: 20px;
+}
+
+.absolute.md\:relative.top-full.left-0.w-full.md\:w-auto.bg-\[\#1a202c\].md\:bg-transparent.shadow-md.md\:shadow-none.z-10 {
+  border-radius: 8px;
+}
+
+.block.md\:inline-block.px-4.py-2.rounded.hover\:bg-\[\#242c3a\]:hover.focus\:outline-none:hover {
+  border-radius: 8px !important;
+  cursor: pointer;
+  background-color: #242c3a !important;
 }

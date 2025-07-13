@@ -22,8 +22,12 @@
     <section class="languages-grid">
       <h2>Explore Programming Languages</h2>
       <div class="grid">
-        <el-card v-for="language in languages" :key="language.name" class="language-card"
-          @click="navigateToLanguage(language.path)">
+        <el-card
+          v-for="language in languages"
+          :key="language.name"
+          class="language-card"
+          @click="navigateToLanguage(language.path)"
+        >
           <img :src="language.logo" :alt="language.name" class="logo" />
           <h3 class="language-name">{{ language.name }}</h3>
         </el-card>
