@@ -48,6 +48,7 @@ p {
 .hero {
   text-align: center;
   margin-bottom: 20px;
+  align-items: center;
 }
 
 .table-of-contents {
@@ -104,6 +105,7 @@ pre {
 h1 {
   font-weight: bold;
   margin-bottom: 10px;
+  font-size: 2em;
 }
 
 h2 {
@@ -116,12 +118,14 @@ h2 {
   margin-bottom: 20px !important;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
+  font-size: 1.5em !important;
 }
 
 h3 {
   font-weight: bold;
   color: #cbd5e0;
   padding-left: 15px;
+  font-size: 1.17em;
 }
 
 .el-collapse {

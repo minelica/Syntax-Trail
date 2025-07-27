@@ -69,11 +69,7 @@
 
     <header class="hero">
       <p style="text-align: center">
-        <img
-          src="/src/assets/logoST.jpg"
-          style="width: 500px; border-radius: 20px; margin-top: 10px"
-          alt="Logo"
-        />
+        <img src="/src/assets/logoST.jpg" class="about_us_logo" alt="Logo" />
       </p>
     </header>
 
@@ -83,12 +79,22 @@
 
 <style lang="scss" scoped>
 .h2_about {
-  margin-top: 10px;
   text-align: center;
+  margin: 0 !important;
+  font-size: 1.5em !important;
+  margin-bottom: 10px !important;
 }
 
 .highlight {
   font-weight: bold;
   color: #63b3ed;
+}
+
+.about_us_logo {
+  width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
 }
 </style>
