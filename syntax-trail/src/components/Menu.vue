@@ -143,6 +143,16 @@ li {
   list-style: none;
 }
 
+li:hover {
+  background-color: #242c3a;
+  border-radius: 8px;
+}
+
+.block.px-4.py-2:hover {
+  background-color: #242c3a;
+  border-radius: 8px;
+}
+
 button {
   background: none;
   border: none;
@@ -150,6 +160,10 @@ button {
 
 .w-14.h-14.rounded-lg {
   border-radius: 20px;
+}
+
+.w-14.h-14.rounded-lg {
+  margin-left: 10px;
 }
 
 @media (min-width: 768px) {
