@@ -1,14 +1,14 @@
 <template>
   <div class="language-page">
     <!-- Hero Section -->
-    <header class="hero">
+    <header class="hero" role="banner">
       <h1>Syntax Trail</h1>
-      <p style="text-align: center">Your Companion for Exploring Programming Languages</p>
-      <!--  <p><img src="/src/assets/logoST.jpg" style="width: 400px; border-radius: 20px; margin-top: 20px" alt="Logo"/></p> -->
+      <p class="hero-sub">Your Companion for Exploring Programming Languages</p>
     </header>
 
     <!-- Introduction Section -->
-    <section class="introduction">
+    <section class="introduction" aria-labelledby="intro-heading">
+      <h2 id="intro-heading" class="visually-hidden">Introduction</h2>
       <p class="home-intro">
         Syntax Trail is your ultimate guide to learning and mastering various programming languages.
         Whether you are a beginner looking to start your coding journey or an experienced developer
@@ -19,29 +19,43 @@
     </section>
 
     <!-- Grid Section -->
-    <section class="languages-grid">
-      <h2>Explore Programming Languages</h2>
-      <div class="grid">
-        <el-card
-          v-for="language in languages"
-          :key="language.name"
-          class="language-card"
-          @click="navigateToLanguage(language.path)"
-        >
-          <img :src="language.logo" :alt="language.name" class="logo" />
-          <h3 class="language-name">{{ language.name }}</h3>
-        </el-card>
-      </div>
+    <section class="languages-grid" aria-labelledby="languages-heading">
+      <h2 id="languages-heading">Explore Programming Languages</h2>
+
+      <!-- role=list verbessert Ankündigung in Screenreadern -->
+      <ul class="grid" role="list">
+        <li v-for="language in languages" :key="language.name" class="grid-item" role="listitem">
+          <!-- Ganze Karte ist ein Link: Tastatur & A11y ✔ -->
+          <RouterLink
+            class="card-link"
+            :to="language.path"
+            :aria-label="`Open ${language.name} page`"
+          >
+            <el-card class="language-card" shadow="hover">
+              <div class="logo-wrap" :aria-hidden="true">
+                <img
+                  :src="language.logo"
+                  :alt="`${language.name} logo`"
+                  class="logo"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3 class="language-name">{{ language.name }}</h3>
+            </el-card>
+          </RouterLink>
+        </li>
+      </ul>
     </section>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { RouterLink } from 'vue-router'
+// import { useRouter } from 'vue-router'
 
-import { useRouter } from 'vue-router'
-
-const router = useRouter()
+// const router = useRouter()
 
 const languages = ref([
   { name: 'JavaScript', logo: '/assets/javascript.jpg', path: '/javascript' },
@@ -62,26 +76,38 @@ const languages = ref([
   { name: 'MATLAB', logo: '/assets/matlab.jpg', path: '/matlab' },
   { name: 'Dart', logo: '/assets/dart.jpg', path: '/dart' },
 ])
-
-const navigateToLanguage = (path: string) => {
-  router.push(path)
-}
 </script>
 
 <style scoped>
+/* ---------- Helpers ---------- */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; border: 0; padding: 0; margin: -1px;
+}
+
+/* ---------- Layout ---------- */
+.language-page {
+  max-width: 1200px;
+  margin: 0 auto;           /* zentriert den Inhalt */
+  padding: 0 1rem;
+}
+
 .hero {
   text-align: center;
   padding: 2rem 0;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 800;
 }
 
-.hero p {
-  font-size: 1.5rem;
+.hero-sub {
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
   color: #a0aec0;
+  text-align: center;
 }
 
 .languages-grid {
@@ -90,65 +116,100 @@ const navigateToLanguage = (path: string) => {
 
 .languages-grid h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
   margin-bottom: 1rem;
 }
 
+/* Grid: schön responsiv und Karten zentriert */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.25rem;
+  padding: 1rem 0 2rem;
+  justify-items: center; /* Karten in Spalten zentrieren */
 }
 
+.grid-item {
+  width: 100%;
+}
+
+/* ---------- Card ---------- */
+.card-link {
+  display: block;            /* macht Link flächig (ganze Karte) */
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Deine Karte, jetzt a11y- & responsive-feinjustiert */
 .language-card {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* horizontal zentriert */
+  justify-content: center;   /* vertikal zentriert */
   background-color: #1a202c;
   color: #e2e8f0;
   border-radius: 8px;
-  /*padding: 1rem;*/
-  transition: transform 0.2s;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  cursor: pointer;
+  padding: 1rem;
+  text-align: center;
+  transition: transform .2s ease, box-shadow .2s ease;
+  min-height: 180px;         /* sorgt für konsistente Höhe */
 }
 
-.language-card:hover {
-  transform: scale(1.05);
+/* Bildbereich mit Aspect-Ratio verhindert Layout-Jumps */
+.logo-wrap {
+  width: 100%;
+  max-width: 140px;
+  aspect-ratio: 1 / 1;      /* quadratischer Bereich */
+  display: grid;
+  place-items: center;       /* Bild in der Mitte */
+  overflow: hidden;
+  margin-bottom: .5rem;
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 90%;
+  height: 90%;
+  /* object-fit: cover; */
+  border-radius: 8px;
 }
 
+/* Kontrastreicher Text (vorher war #1a202c auf dunkel → zu wenig Kontrast) */
 .language-name {
-  text-align: center !important;
-}
-
-.home-intro {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
-  font-family: 'Courier New', Courier, monospace;
-  /*text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 15px #fff,
-    0 0 20px #1a202c,
-    0 0 30px #1a202c,
-    0 0 40px #1a202c,
-    0 0 55px #1a202c,
-    0 0 75px #1a202c,
-    2px 2px 2px rgba(206, 89, 55, 0);*/
-  text-align: center;
-  font-size: 18px;
-}
-
-h3 {
   font-family: 'Courier New', Courier, monospace;
   color: #1a202c;
-  margin-top: 10px;
+  font-size: 1rem;
+  margin-top: .25rem;
+}
+
+/* Hover & Focus (Fokus sichtbar für Tastatur) */
+.language-card:hover {
+  transform: translateY(-2px);
+}
+
+.card-link:focus-visible .language-card {
+  outline: 3px solid #86bef9;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px rgba(134, 190, 249, .35);
+}
+
+/* Reduced motion respektieren */
+@media (prefers-reduced-motion: reduce) {
+  .language-card { transition: none; }
+  .language-card:hover { transform: none; }
+}
+
+/* Intro-Text */
+.home-intro {
+  padding: 20px 24px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 18px;
+  max-width: 80ch;
+  margin: 0 auto;
+}
+
+/* Kleines Tuning auf sehr schmalen Screens */
+@media (max-width: 420px) {
+  .logo-wrap { max-width: 120px; }
 }
 </style>

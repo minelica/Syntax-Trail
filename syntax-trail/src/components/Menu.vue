@@ -63,7 +63,7 @@ const languages = [
   { name: 'R', route: '/r' },
   { name: 'ShellScript', route: '/shellscript' },
   { name: 'Matlab', route: '/matlab' },
-  { name: 'Dart', route: '/dart' }
+  { name: 'Dart', route: '/dart' },
 ]
 </script>
 
@@ -78,21 +78,49 @@ const languages = [
     </div>
 
     <!-- Hamburger Button -->
-    <button @click="toggleMenu" class="md:hidden text-gray-200 focus:outline-none hover:text-gray-400 cursor-pointer"
-      aria-label="Toggle menu" :aria-expanded="isMenuOpen" aria-controls="main-menu">
-      <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    <button
+      @click="toggleMenu"
+      class="md:hidden text-gray-200 focus:outline-none hover:text-gray-400 cursor-pointer"
+      aria-label="Toggle menu"
+      :aria-expanded="isMenuOpen"
+      aria-controls="main-menu"
+    >
+      <svg
+        class="w-6 h-6"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
       </svg>
     </button>
 
     <!-- Navigation -->
-    <nav id="main-menu" role="navigation"
-      :class="[isMenuOpen ? 'block' : 'hidden', 'md:flex md:items-center w-full md:w-auto absolute md:relative top-full left-0 bg-[#1a202c] md:bg-transparent shadow-md md:shadow-none z-10']">
-      <ul class="md:flex items-start text-lg font-bold space-y-4 md:space-y-0 md:space-x-6 p-4 md:p-0">
+    <nav
+      id="main-menu"
+      role="navigation"
+      :class="[
+        isMenuOpen ? 'block' : 'hidden',
+        'md:flex md:items-center w-full md:w-auto absolute md:relative top-full left-0 bg-[#1a202c] md:bg-transparent shadow-md md:shadow-none z-10',
+      ]"
+    >
+      <ul
+        class="md:flex items-start text-lg font-bold space-y-4 md:space-y-0 md:space-x-6 p-4 md:p-0"
+      >
         <!-- Home -->
         <li class="pl-4 md:pl-0">
-          <RouterLink to="/" @click="closeMenuIfMobile" class="block px-4 py-2 rounded hover:bg-[#242c3a]"
-            active-class="text-blue-500">
+          <RouterLink
+            to="/"
+            @click="closeMenuIfMobile"
+            class="block px-4 py-2 rounded hover:bg-[#242c3a]"
+            active-class="text-blue-500"
+          >
             Home
           </RouterLink>
         </li>
@@ -101,17 +129,31 @@ const languages = [
         <li class="relative group pl-4 md:pl-0">
           <button
             class="flex items-center w-full md:w-auto px-4 py-2 rounded hover:bg-[#242c3a] focus:outline-none text-left"
-            aria-haspopup="true" aria-expanded="false" tabindex="0">
+            aria-haspopup="true"
+            aria-expanded="false"
+            tabindex="0"
+          >
             Languages
-            <svg class="ml-2 w-4 h-4 text-gray-300" fill="none" stroke="currentColor" stroke-width="2"
-              viewBox="0 0 24 24">
+            <svg
+              class="ml-2 w-4 h-4 text-gray-300"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-          <ul class="hidden group-hover:block absolute bg-[#1a202c] shadow-lg rounded-lg mt-2 p-2 w-48 text-sm z-20">
+          <ul
+            class="hidden group-hover:block absolute bg-[#1a202c] shadow-lg rounded-lg mt-2 p-2 w-48 text-sm z-20"
+          >
             <li v-for="lang in languages" :key="lang.name" class="hover:bg-[#242c3a] rounded">
-              <RouterLink :to="lang.route" @click="closeMenuIfMobile" class="block px-4 py-2"
-                active-class="text-blue-500">
+              <RouterLink
+                :to="lang.route"
+                @click="closeMenuIfMobile"
+                class="block px-4 py-2"
+                active-class="text-blue-500"
+              >
                 {{ lang.name }}
               </RouterLink>
             </li>
@@ -120,8 +162,12 @@ const languages = [
 
         <!-- About -->
         <li class="pl-4 md:pl-0">
-          <RouterLink to="/about" @click="closeMenuIfMobile" class="block px-4 py-2 rounded hover:bg-[#242c3a]"
-            active-class="text-blue-500">
+          <RouterLink
+            to="/about"
+            @click="closeMenuIfMobile"
+            class="block px-4 py-2 rounded hover:bg-[#242c3a]"
+            active-class="text-blue-500"
+          >
             About
           </RouterLink>
         </li>
@@ -167,7 +213,7 @@ button {
 }
 
 @media (min-width: 768px) {
-  .group:hover>ul {
+  .group:hover > ul {
     display: block;
   }
 }
